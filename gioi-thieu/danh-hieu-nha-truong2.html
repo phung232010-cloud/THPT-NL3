@@ -74,6 +74,26 @@ background: url("App/images/background/34a5c89879d04bd0b22d4754040a4df9.jpg") re
   gtag('config', 'G-KBS4FQZVMK');
 </script> 
   
+
+<style>
+  /* Fix mobile scrolling freeze / unlock touch scroll */
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+    height: auto !important;
+  }
+  body.overflow-hidden {
+    overflow-y: auto !important;
+    position: static !important;
+  }
+  .menu-mobi {
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x !important;
+  }
+</style>
+
 </head><body  style="padding:0px;margin:0px;" >
   
   
@@ -196,7 +216,8 @@ font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
  /**/
 </style></div><div id="module4" class="ModuleWrapper" ><nav aria-label="Thực đơn" id="menu4" class="navigation-menu-default-type1 navigation-menu-default-type2" style="overflow: hidden;"> <div class="navbar navbar-default"> <div class="">
  <div class="">
- <div class="navbar-header">       <div class="menu-mobi"> <ul class="list-menu" id="menu4">   <li data-id=2181409 class="li-block"> <a href="gioi-thieu" title="GIỚI THIỆU">GIỚI THIỆU</a> </li>   <li data-id=3274379 class="li-block"> <a href="co-cau-to-chuc" title="CƠ CẤU TỔ CHỨC">CƠ CẤU TỔ CHỨC</a> </li>   <li data-id=3274397 class="li-block"> <a href="thong-bao" title="Thông báo">Thông báo</a> </li>   <li data-id=3274400 class="li-block"> <a href="tin-hoat-dong" title="Tin hoạt động">Tin hoạt động</a> </li>   <li data-id=3274421 class="li-block"> <a href="tai-nguyen" title="Tài nguyên">Tài nguyên</a> </li>   <li data-id=3274440 class="li-block"> <a href="/cuu-gc-cuu-hs" title="Cựu GC - HS">Cựu GC - HS</a> </li>   <li data-id=3274443 class="li-block"> <a href="/huongnghieptuyensinh" title="KẾ HOẠCH">KẾ HOẠCH</a> </li>   <li data-id=3555811 class="li-block"> <a href="/khuyen-hoc-khuyen-tai" title="Khuyến học">Khuyến học</a> </li>   </ul> </div> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-4" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> </div> <div class="collapse navbar-collapse fluid-nav" id="bs-navbar-collapse-4">
+ <div class="navbar-header">       <div class="menu-mobi"> <ul class="list-menu" id="menu4">   <li data-id=2181409 class="li-block"> <a href="gioi-thieu" title="GIỚI THIỆU">GIỚI THIỆU</a> </li>   <li data-id=3274379 class="li-block"> <a href="co-cau-to-chuc" title="CƠ CẤU TỔ CHỨC">CƠ CẤU TỔ CHỨC</a> </li>   <li data-id=3274397 class="li-block"> <a href="thong-bao" title="Thông báo">Thông báo</a> </li>   <li data-id=3274400 class="li-block"> <a href="tin-hoat-dong" title="Tin hoạt động">Tin hoạt động</a> </li>
+<li data-id="menu-clb-mobi" class="li-block"><a href="cau-lac-bo" title="CÂU LẠC BỘ">CÂU LẠC BỘ</a></li>   <li data-id=3274421 class="li-block"> <a href="tai-nguyen" title="Tài nguyên">Tài nguyên</a> </li>   <li data-id=3274440 class="li-block"> <a href="/cuu-gc-cuu-hs" title="Cựu GC - HS">Cựu GC - HS</a> </li>   <li data-id=3274443 class="li-block"> <a href="/huongnghieptuyensinh" title="KẾ HOẠCH">KẾ HOẠCH</a> </li>   <li data-id=3555811 class="li-block"> <a href="/khuyen-hoc-khuyen-tai" title="Khuyến học">Khuyến học</a> </li>   </ul> </div> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar-collapse-4" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> </div> <div class="collapse navbar-collapse fluid-nav" id="bs-navbar-collapse-4">
  <div class="intestine-collapse">       <ul id="fluid-nav-positive4" role="tablist" class="nav navbar-nav fluid-nav-positive">
    <li  role="presentation" class="item dropdown" data-id="2181409" >
  <a rel="noopener" href="gioi-thieu"  title="GIỚI THIỆU" >
@@ -285,7 +306,7 @@ font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
          <span class="title">TDTT</span>   </a>     </li>     </ul>   </li>   <li  role="presentation" class="item" data-id="3535656" >
  <a rel="noopener" href="tin-hoat-dong/diem-tin-giao-duc"  title="Điểm tin giáo dục" >
          <span class="title">Điểm tin giáo dục</span>   </a>     </li>     </ul>   </li>   
-   <li role="presentation" class="item dropdown" data-id="menu-clb" style="display:none;">
+   <li role="presentation" class="item dropdown" data-id="menu-clb">
  <a rel="noopener" href="cau-lac-bo" title="CÂU LẠC BỘ" >
          <span class="title">CÂU LẠC BỘ</span> <span class="caret" style="margin-left:5px;"></span> </a> <a class="dropdown-toggle" href="javascript:void(0);"><i class="vi vi-plus"></i></a> <ul class="dropdown-menu">
    <li role="presentation" class="item"><a rel="noopener" href="cau-lac-bo" title="Giới thiệu chung 9 CLB"><span class="title"><strong>Giới thiệu chung 9 CLB</strong></span></a></li>
@@ -298,7 +319,7 @@ font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
    <li role="presentation" class="item"><a rel="noopener" href="cau-lac-bo#clb-thanh-nien-tinh-nguyen" title="7. CLB Thanh niên Tình nguyện"><span class="title">7. CLB Thanh niên Tình nguyện</span></a></li>
    <li role="presentation" class="item"><a rel="noopener" href="cau-lac-bo#clb-van-hoc" title="8. CLB Văn học"><span class="title">8. CLB Văn học</span></a></li>
    <li role="presentation" class="item"><a rel="noopener" href="cau-lac-bo#clb-the-duc-the-thao" title="9. CLB Thể dục Thể thao"><span class="title">9. CLB Thể dục Thể thao</span></a></li>
- </ul> </li> <li  role="presentation" class="item dropdown" data-id="3274421" style="display:none;">
+ </ul> </li> <li  role="presentation" class="item dropdown" data-id="3274421">
  <a rel="noopener" href="tai-nguyen"  title="Tài nguyên" >
          <span class="title">Tài nguyên</span>   <span class="caret" style="margin-left:5px;"></span>   </a>   <a class="dropdown-toggle" href="javascript:void(0);"><i class="vi vi-plus"></i></a>     <ul  class=" dropdown-menu">
    <li  role="presentation" class="item dropdown has-child" data-id="3274434" >
@@ -433,6 +454,19 @@ font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   
 
 
+
+<script id="overflow-hidden-remover">
+  (function() {
+    window.addEventListener('load', function() {
+      document.body.classList.remove('overflow-hidden');
+    });
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('a')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    });
+  })();
+</script>
 </body>
 <!--[if lt IE 9]>
 <script src="3rdparty/Bootstrap/js/ie8-responsive-file-warning.js"></script>

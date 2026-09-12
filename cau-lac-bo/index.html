@@ -448,6 +448,26 @@
       background-color: #fff;
     }
   </style>
+
+<style>
+  /* Fix mobile scrolling freeze / unlock touch scroll */
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+    height: auto !important;
+  }
+  body.overflow-hidden {
+    overflow-y: auto !important;
+    position: static !important;
+  }
+  .menu-mobi {
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-x !important;
+  }
+</style>
+
 </head>
 
 <body style="padding:0px;margin:0px;">
@@ -1408,6 +1428,19 @@
       });
     })();
   </script>
+
+<script id="overflow-hidden-remover">
+  (function() {
+    window.addEventListener('load', function() {
+      document.body.classList.remove('overflow-hidden');
+    });
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('a')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    });
+  })();
+</script>
 </body>
 
 </html>
