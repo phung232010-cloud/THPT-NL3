@@ -1,0 +1,774 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/3rdparty/Fonts/Roboto-Regular.eot");
+  src: url("/3rdparty/Fonts/Roboto-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/Roboto-Regular.woff2") format("woff2"),
+    url("/3rdparty/Fonts/Roboto-Regular.woff") format("woff"),
+    url("/3rdparty/Fonts/Roboto-Regular.ttf") format("truetype"),
+    url("/3rdparty/Fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Bold";
+  src: url("/3rdparty/Fonts/Inter-Bold.eot");
+  src: url("/3rdparty/Fonts/Inter-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/3rdparty/Fonts/Inter-Bold.woff2") format("woff2"),
+    url("/3rdparty/Fonts/Inter-Bold.woff") format("woff"),
+    url("/3rdparty/Fonts/Inter-Bold.ttf") format("truetype"),
+    url("/3rdparty/Fonts/Inter-Bold.svg#Inter-Bold") format("svg");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter-Medium";
+  src: url("/3rdparty/Fonts/Inter-Medium.eot");
+  src: url("/3rdparty/Fonts/Inter-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/Inter-Medium.woff2") format("woff2"),
+    url("/3rdparty/Fonts/Inter-Medium.woff") format("woff"),
+    url("/3rdparty/Fonts/Inter-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("/3rdparty/Fonts/Inter18pt-SemiBold.eot");
+  src: url("/3rdparty/Fonts/Inter18pt-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/Inter18pt-SemiBold.woff2") format("woff2"),
+    url("/3rdparty/Fonts/Inter18pt-SemiBold.woff") format("woff"),
+    url("/3rdparty/Fonts/Inter18pt-SemiBold.ttf") format("truetype"),
+    url("/3rdparty/Fonts/Inter18pt-SemiBold.svg#Inter18pt-SemiBold")
+      format("svg");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter-ExtraBold";
+  src: url("/3rdparty/Fonts/Inter18pt-ExtraBold.eot");
+  src: url("/3rdparty/Fonts/Inter18pt-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/Inter18pt-ExtraBold.woff2") format("woff2"),
+    url("/3rdparty/Fonts/Inter18pt-ExtraBold.woff") format("woff"),
+    url("/3rdparty/Fonts/Inter18pt-ExtraBold.ttf") format("truetype"),
+    url("/3rdparty/Fonts/Inter18pt-ExtraBold.svg#Inter18pt-ExtraBold")
+      format("svg");
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter", Arial, sans-serif;
+  src: url("/3rdparty/Fonts/Inter-Regular.eot");
+  src: url("/3rdparty/Fonts/Inter-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/Inter-Regular.woff2") format("woff2"),
+    url("/3rdparty/Fonts/Inter-Regular.woff") format("woff"),
+    url("/3rdparty/Fonts/Inter-Regular.ttf") format("truetype"),
+    url("/3rdparty/Fonts/Inter-Regular.svg#Inter-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Noto Sans", Arial, sans-serif;
+  src: url("/3rdparty/Fonts/NotoSans-Regular.eot");
+  src: url("/3rdparty/Fonts/NotoSans-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/NotoSans-Regular.woff2") format("woff2"),
+    url("/3rdparty/Fonts/NotoSans-Regular.woff") format("woff"),
+    url("/3rdparty/Fonts/NotoSans-Regular.ttf") format("truetype"),
+    url("/3rdparty/Fonts/NotoSans-Regular.svg#NotoSans-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans", Arial, sans-serif;
+  src: url("/3rdparty/Fonts/opensans-regular.eot");
+  src: url("/3rdparty/Fonts/opensans-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/opensans-regular.woff") format("woff"),
+    url("/3rdparty/Fonts/opensans-regular.ttf") format("truetype"),
+    url("/3rdparty/Fonts/opensans-regular.svg#OpenSans") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Be Vietnam Pro", Arial, sans-serif;
+  src: url("/3rdparty/Fonts/BeVietnam-Regular.eot");
+  src: url("/3rdparty/Fonts/BeVietnam-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/3rdparty/Fonts/BeVietnam-Regular.woff2") format("woff2"),
+    url("/3rdparty/Fonts/BeVietnam-Regular.woff") format("woff"),
+    url("/3rdparty/Fonts/BeVietnam-Regular.ttf") format("truetype"),
+    url("/3rdparty/Fonts/BeVietnam-Regular.svg#BeVietnam-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.text-medium {
+  font-family: "Inter-Medium", sans-serif;
+}
+
+.text-bold {
+  font-family: "Inter-Bold", sans-serif;
+  font-weight: normal !important;
+}
+.text-extrabold {
+  font-family: "Inter-ExtraBold", sans-serif;
+}
+.text-semibold {
+  font-family: "Inter-SemiBold", sans-serif;
+}
+.style-checkbox:focus:after {
+  border-color: var(--brand-primary) !important;
+  box-shadow: none !important;
+}
+.style-checkbox[disabled]:checked:before {
+  border-color: var(--brand-primary);
+}
+.style-radio:before {
+  background-color: var(--brand-primary) !important;
+}
+.style-radio:checked:after {
+  border: 1px solid var(--brand-primary);
+  outline: none !important;
+}
+.gap-4 {
+  gap: 0.25rem;
+}
+
+.gap-8 {
+  gap: 0.55rem;
+}
+
+.gap-12 {
+  gap: 0.75rem;
+}
+
+.lobibox.lobibox-info .lobibox-footer {
+  background-color: #fff !important;
+  padding: 6px 20px 20px 20px !important;
+  border-radius: 0 0 10px 10px;
+}
+
+.lobibox.lobibox-info .lobibox-header,
+.lobibox.lobibox-confirm .lobibox-header {
+  color: var(--text-color) !important;
+  background-color: #fff !important;
+  padding: 15px 20px;
+  border-bottom: 1px solid #d5d5d5;
+  border-radius: 10px 10px 0 0;
+}
+
+.lobibox.lobibox-info .lobibox-header .lobibox-title,
+.lobibox.lobibox-confirm .lobibox-header .lobibox-title {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: normal;
+  max-width: 96%;
+  display: inline-block;
+}
+
+.lobibox .lobibox-btn.lobibox-btn-no {
+  border: 1px solid #d0d5dd !important;
+  color: #101828 !important;
+  background-color: #fff !important;
+  border-radius: 8px !important;
+  padding: 0 14px !important;
+  line-height: 34px !important;
+  min-width: 80px !important;
+  font-family: "Inter-Medium", sans-serif;
+}
+
+.modal .modal-dialog.modal-fullscreen {
+  width: 100% !important;
+  left: 0;
+  height: 100vh !important;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1111;
+  right: 0;
+}
+
+.modal .modal-dialog.modal-fullscreen .modal-content {
+  height: 100%;
+  display: block;
+  background: #fafafa;
+  border-radius: 0;
+  border: none;
+}
+
+.modal .modal-dialog.modal-fullscreen .modal-content .modal-header {
+  border-radius: 0;
+  background: #ffffff !important;
+  border-bottom: 1px solid #d0d5dd;
+}
+
+.modal
+  .modal-dialog.modal-fullscreen
+  .modal-content
+  .modal-header
+  .modal-title {
+  color: var(--text-color) !important;
+  font-family: "Inter-Bold", sans-serif;
+  text-align: left;
+}
+
+.modal
+  .modal-dialog.modal-fullscreen
+  .modal-content
+  .modal-header
+  button.close {
+  opacity: 1;
+  color: var(--text-color) !important;
+}
+
+.modal .modal-dialog.modal-fullscreen .modal-content .modal-body {
+  background: #ffffff;
+  padding: 24px 24px 0 24px !important;
+  height: calc(100vh - 60px);
+  margin: 0;
+  overflow-y: auto !important;
+  width: 100%;
+  padding-bottom: 60px !important;
+}
+
+.modal .modal-dialog.modal-fullscreen .modal-content .form-button-action {
+  position: fixed;
+  bottom: 0 !important;
+  padding: 12px 24px 12px 24px !important;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 99;
+  border-top: 1px solid #d0d5dd;
+  width: 100%;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+
+.modal .modal-dialog.modal-fullscreen.modal-fullwidth {
+  width: 100% !important;
+  left: 0;
+}
+
+.modal .modal-dialog.modal-fullscreen.modal-50 {
+  width: 50% !important;
+  left: 50%;
+}
+
+@media (max-width: 768px) {
+  .modal .modal-dialog.modal-fullscreen.modal-50 {
+    width: 100% !important;
+    left: 0;
+  }
+}
+
+.btn-action-info[data-dismiss="modal"],
+.lobibox-btn.lobibox-btn-no {
+  border: 1px solid #d0d5dd !important;
+  color: rgba(68, 73, 77, 1) !important;
+}
+
+.lobibox-btn.lobibox-btn-no:hover {
+  background-color: #f9fafb !important;
+  color: rgba(68, 73, 77, 1) !important;
+}
+
+.lobibox.lobibox-confirm .lobibox-body .lobibox-icon:not(.confirm-icon) {
+  color: var(--text-color) !important;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.lobibox-notify.lobibox-notify-success {
+  background: rgba(230, 249, 239, 1) !important;
+  color: #006735 !important;
+  border-radius: 8px;
+  border-color: #006735 !important;
+}
+
+.lobibox-notify.lobibox-notify-error {
+  background: rgba(253, 229, 234, 1) !important;
+  color: rgba(203, 0, 43, 1) !important;
+  border-radius: 8px;
+  border-color: rgba(203, 0, 43, 1) !important;
+}
+
+.lobibox-notify.lobibox-notify-info {
+  background: rgba(254, 247, 243, 1) !important;
+  color: rgba(181, 79, 13, 1) !important;
+  border-radius: 8px;
+  border-color: rgba(181, 79, 13, 1) !important;
+}
+
+.lobibox-notify.lobibox-notify-info .lobibox-delay-indicator > div {
+  background-color: rgba(181, 79, 13, 1) !important;
+}
+
+.lobibox-notify.lobibox-notify-error .lobibox-delay-indicator > div {
+  background-color: rgba(203, 0, 43, 1) !important;
+}
+
+.lobibox-notify.lobibox-notify-success .lobibox-delay-indicator > div {
+  background-color: #006735 !important;
+}
+
+.lobibox-notify.lobibox-notify-success .lobibox-notify-icon .icon-el {
+  background-image: url("/Common/images/icon_success.png") !important;
+}
+
+.lobibox-notify.lobibox-notify-error .lobibox-notify-icon .icon-el {
+  background-image: url("/Common/images/icon_error.png") !important;
+}
+
+.lobibox-notify.lobibox-notify-info .lobibox-notify-icon .icon-el {
+  background-image: url("/Common/images/icon_info.png") !important;
+}
+
+.lobibox-notify-icon .icon-el {
+  background-size: unset;
+  background-repeat: no-repeat;
+  background-position: top center;
+  text-indent: -99999px;
+}
+
+.lobibox-notify .lobibox-notify-icon-wrapper {
+  position: absolute;
+  left: 10px !important;
+  top: 0 !important;
+  width: 56px !important;
+  height: 100%;
+}
+
+.lobibox-notify .lobibox-notify-body {
+  margin: 10px 20px 10px 80px !important;
+}
+
+.lobibox-notify .lobibox-notify-icon {
+  position: relative;
+  top: 8px;
+}
+
+.lobibox-notify .lobibox-notify-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 18px !important;
+}
+
+.lobibox-notify .lobibox-notify-msg {
+  font-size: 16px !important;
+}
+
+.modal-content .modal-header {
+  padding: 15px 24px;
+}
+
+.modal-content .modal-header .modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  padding-right: 24px;
+}
+
+.modal-content .modal-header .close {
+  font-size: 20px;
+  margin-top: 4px !important;
+  font-weight: normal;
+  color: #1e1e1e;
+  opacity: 1;
+}
+
+.modal-content .modal-body {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  padding: 15px 24px;
+}
+
+.highcharts-tooltip-box {
+  fill: #f2f4f7;
+  fill-opacity: 1;
+  stroke-width: 1;
+}
+
+.highcharts-tooltip text {
+  fill: #000;
+  text-shadow: none;
+}
+
+.form-control.error,
+.error-parent,
+.form-control.error + select[multiple] + .smartselect > button,
+.form-control.error + .select2 .select2-selection--single,
+.vhv-form-number.error + .form-control,
+.error + .select2-container--default .select2-selection--single {
+  box-shadow: none !important;
+}
+
+.daterangepicker td.in-range {
+  background-color: var(--brand-primary-20) !important;
+  color: #000 !important;
+}
+
+.daterangepicker td.today,
+.ui-state-highlight {
+  background-color: var(--brand-primary-10) !important;
+  color: #000 !important;
+}
+
+.select2-container--default
+  .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option[aria-selected="true"],
+.smartselect .dropdown-menu > .active > a,
+.smartselect .dropdown-menu > .active > a:focus,
+.daterangepicker .ranges li.active,
+.daterangepicker td.start-date,
+.ui-datepicker-calendar a.ui-state-active,
+.tempus-dominus-widget.light .date-container-days div:not(.no-highlight).active,
+.tempus-dominus-widget.light
+  .date-container-decades
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.light
+  .date-container-months
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.light
+  .date-container-years
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.light
+  .time-container-clock
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.light .time-container-hour div:not(.no-highlight).active,
+.tempus-dominus-widget.light
+  .time-container-minute
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.light
+  .time-container-second
+  div:not(.no-highlight).active {
+  background-color: var(--brand-primary-20) !important;
+  color: #000 !important;
+}
+
+.select2-container--default
+  .select2-results__options
+  .select2-results__option:hover,
+.smartselect .dropdown-menu .ss-option > a:hover,
+.smartselect .dropdown-menu > .active > a:hover,
+.daterangepicker td.active:hover,
+.daterangepicker .ranges li:hover,
+.daterangepicker td.available:hover,
+.daterangepicker th.available:hover,
+.tempus-dominus-widget.light .date-container-days div:not(.no-highlight):hover,
+.tempus-dominus-widget.light
+  .date-container-decades
+  div:not(.no-highlight):hover,
+.tempus-dominus-widget.light
+  .date-container-months
+  div:not(.no-highlight):hover,
+.tempus-dominus-widget.light .date-container-years div:not(.no-highlight):hover,
+.tempus-dominus-widget.light .time-container-clock div:not(.no-highlight):hover,
+.tempus-dominus-widget.light .time-container-hour div:not(.no-highlight):hover,
+.tempus-dominus-widget.light
+  .time-container-minute
+  div:not(.no-highlight):hover,
+.tempus-dominus-widget.light
+  .time-container-second
+  div:not(.no-highlight):hover {
+  background-color: #f0f0f0 !important;
+  color: #000 !important;
+}
+
+.smartselect .dropdown-menu .ss-option > a:hover span {
+  color: #000 !important;
+}
+
+.ui-datepicker-calendar .ui-state-default:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.tempus-dominus-widget.light
+  .date-container-days
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .date-container-decades
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .date-container-months
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .date-container-years
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .time-container-clock
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .time-container-hour
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .time-container-minute
+  div:not(.no-highlight).today:before,
+.tempus-dominus-widget.light
+  .time-container-second
+  div:not(.no-highlight).today:before {
+  border-bottom-color: var(--brand-primary) !important;
+}
+
+.smartselect > .dropdown-menu {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.08),
+    0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.list-notification .item.not-read {
+  background-color: #f2f4f7 !important;
+}
+
+.list-notification .item .time {
+  color: #535454 !important;
+}
+
+.list-notification .item:hover {
+  background-color: var(--brand-primary-10) !important;
+}
+
+.caret {
+  border-top: 5px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+.form-control {
+  color: #101828;
+}
+
+.form-control:hover:not(:focus) {
+  border-color: #101828 !important;
+}
+
+input.form-control:focus,
+textarea.form-control:focus,
+.smartselect.open > button.isActive,
+.artile-edit-layout .form-control:focus:not(.error, .select2-selection),
+.cke_editable:focus-visible:not(.error),
+.artile-edit-layout .cke_editable:focus:not(.error) {
+  box-shadow: none !important;
+  border: 1px solid var(--brand-primary) !important;
+}
+input.form-control.error:focus {
+  border: 1px solid #ff0808 !important;
+}
+.form-control:focus {
+  box-shadow: none !important;
+}
+input::placeholder {
+  color: #667085 !important;
+  opacity: 1;
+}
+
+.form-control::-ms-input-placeholder {
+  color: #667085;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered.color-placeholder,
+.smartselect .ss-label.color-placeholder {
+  color: #9d9d9d !important;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  width: 10px !important;
+}
+
+.btn.btn-secondar {
+  padding: 7px 16px 7px 16px;
+}
+
+.btn.btn-secondary:has(.vi) {
+  padding: 7px 16px 7px 16px;
+}
+
+.btn-action-info.btn-secondary,
+.excel-action.btn-secondary {
+  border-color: var(--brand-primary) !important;
+  color: var(--brand-primary) !important;
+  background-color: #fff !important;
+  box-shadow: none;
+}
+
+.btn-action-info.btn-secondary:hover,
+.excel-action.btn-secondary:hover {
+  border-color: var(--brand-primary) !important;
+  color: var(--brand-primary) !important;
+  background-color: var(--brand-primary-10) !important;
+  box-shadow: none;
+}
+
+.btn-action-danger:hover {
+  background-color: rgba(183, 1, 0, 0.1) !important;
+  border: 1px solid red !important;
+  color: red !important;
+  box-shadow: none;
+}
+
+.btn-action-info.btn-secondary:focus,
+.excel-action.btn-secondary:focus {
+  border-color: var(--brand-primary) !important;
+  color: var(--brand-primary) !important;
+  background-color: var(--brand-primary-20) !important;
+  box-shadow: none;
+}
+
+.btn.btn-secondary:disabled {
+  background-color: #eaecf0 !important;
+  color: #475467 !important;
+}
+
+.btn.btn-default {
+  border: 1px solid #d0d5dd !important;
+  background: #fff;
+  color: #101828 !important;
+}
+
+.btn.btn-default:hover {
+  background: #f9fafb;
+}
+
+.btn.btn-default:focus {
+  background: #f2f4f7;
+}
+
+.btn.btn-default:focus:not(:focus-visible) {
+  background: #f2f4f7;
+  border: 1px solid #d0d5dd !important;
+}
+.btn:focus:focus-visible,
+.btn:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.table-hover > tbody > tr:hover {
+  background-color: #f5f5f5;
+}
+
+.btn.btn-action-info:not(.ss-button):not(.btn-sm):not(.btn-xs):not(.btn-xs):not(.btn-icon),
+.btn.btn-action-primary:not(.ss-button):not(.btn-sm):not(.btn-xs):not(.btn-xs):not(.btn-icon),
+.btn.btn-default:not(.ss-button):not(.btn-sm):not(.btn-xs):not(.btn-xs):not(.btn-icon) {
+  min-width: 80px;
+  min-height: 36px;
+}
+
+.vi,
+.vis,
+.vit,
+.vid,
+.vil,
+.vir {
+  line-height: 1;
+}
+
+.color-gray.color-500 {
+  color: #667085;
+}
+.lobibox .lobibox-footer.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap-file-uploader .uploadifyImageResult a.delFile,
+.wrap-uploadAlbum .uploadifyImageResult a.delFile {
+  background: #fff !important;
+  color: #d92d20 !important;
+}
+.tempus-dominus-widget .date-container-days div:not(.no-highlight),
+.tempus-dominus-widget .date-container-decades div:not(.no-highlight),
+.tempus-dominus-widget .date-container-months div:not(.no-highlight),
+.tempus-dominus-widget .date-container-years div:not(.no-highlight),
+.tempus-dominus-widget .time-container-clock div:not(.no-highlight),
+.tempus-dominus-widget .time-container-hour div:not(.no-highlight),
+.tempus-dominus-widget .time-container-minute div:not(.no-highlight),
+.tempus-dominus-widget .time-container-second div:not(.no-highlight) {
+  border-radius: unset !important;
+  width: 26px;
+  height: 28px;
+}
+.tempus-dominus-widget.dark {
+  color: #fff !important;
+}
+.tempus-dominus-widget.dark .date-container-days .dow {
+  color: #545454 !important;
+  font-weight: bold;
+}
+.tempus-dominus-widget.dark .date-container-days div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .date-container-days div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .date-container-decades div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .date-container-decades div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .date-container-months div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .date-container-months div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .date-container-years div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .date-container-years div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .time-container-clock div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .time-container-clock div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .time-container-hour div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .time-container-hour div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .time-container-minute div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .time-container-minute div:not(.no-highlight).old,
+.tempus-dominus-widget.dark .time-container-second div:not(.no-highlight).new,
+.tempus-dominus-widget.dark .time-container-second div:not(.no-highlight).old {
+  color: #fff !important;
+}
+.tempus-dominus-widget.dark .date-container-days div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark
+  .date-container-decades
+  div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .date-container-months div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .date-container-years div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .time-container-clock div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .time-container-hour div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .time-container-minute div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .time-container-second div:not(.no-highlight):hover,
+.tempus-dominus-widget.dark .toolbar div:hover {
+  background-color: #f0f0f0 !important;
+}
+.tempus-dominus-widget .date-container-days div:not(.no-highlight).today,
+.tempus-dominus-widget .date-container-decades div:not(.no-highlight).today,
+.tempus-dominus-widget .date-container-months div:not(.no-highlight).today,
+.tempus-dominus-widget .date-container-years div:not(.no-highlight).today,
+.tempus-dominus-widget .time-container-clock div:not(.no-highlight).today,
+.tempus-dominus-widget .time-container-hour div:not(.no-highlight).today,
+.tempus-dominus-widget .time-container-minute div:not(.no-highlight).today,
+.tempus-dominus-widget .time-container-second div:not(.no-highlight).today {
+  position: unset !important;
+  background-color: var(--brand-primary-10) !important;
+  color: #000 !important;
+}
+.tempus-dominus-widget.dark .date-container-days div:not(.no-highlight).active,
+.tempus-dominus-widget.dark
+  .date-container-decades
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.dark
+  .date-container-months
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.dark .date-container-years div:not(.no-highlight).active,
+.tempus-dominus-widget.dark .time-container-clock div:not(.no-highlight).active,
+.tempus-dominus-widget.dark .time-container-hour div:not(.no-highlight).active,
+.tempus-dominus-widget.dark
+  .time-container-minute
+  div:not(.no-highlight).active,
+.tempus-dominus-widget.dark
+  .time-container-second
+  div:not(.no-highlight).active {
+  background-color: var(--brand-primary-20) !important;
+  color: #fff !important;
+}

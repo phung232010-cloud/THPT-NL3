@@ -1,0 +1,1376 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<base href="/THPT-NL3/">
+<script>
+  if (!location.pathname.startsWith('/THPT-NL3')) {
+    var b = document.querySelector('base');
+    if (b) b.setAttribute('href', '/');
+  }
+</script>
+  <title>Giới thiệu Hệ thống Câu lạc bộ Học sinh - Trường THPT Nghi Lộc 3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description"
+    content="Hệ thống 9 Câu lạc bộ học sinh Trường THPT Nghi Lộc 3: Truyền thông, Âm nhạc, Sách và Hành động, Khoa học Tự nhiên, Chuyển đổi số, Tiếng Anh, Thanh niên Tình nguyện, Văn học, Thể dục Thể thao." />
+  <meta name="keywords"
+    content="CLB THPT Nghi Lộc 3, Câu lạc bộ học sinh, Truyền thông, Âm nhạc, Sách, KHTN, Chuyển đổi số, Tiếng Anh, Tình nguyện, Văn học, TDTT" />
+  <meta name="Author" content="Trường THPT Nghi Lộc 3" />
+  <meta property="og:title" content="Giới thiệu Hệ thống Câu lạc bộ Học sinh - Trường THPT Nghi Lộc 3" />
+  <meta property="og:description" content="Khám phá 9 Câu lạc bộ học sinh sôi nổi, bổ ích tại Trường THPT Nghi Lộc 3" />
+  <meta property="og:image" content="/upload/33152/20220328/LOGO_TRUONG_THIET_KE_NGHI_LOC_3_MaU_2_8c188a5560.jpg" />
+
+  <link href="Common/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="preload" href="css/1.52158288/33152/2133/style.css?58288" as="style">
+  <link type="text/css" rel="stylesheet" href="css/1.52158288/33152/2133/style.css?58288" />
+  <link rel="stylesheet" type="text/css" href="3rdparty/font-awesome-5.15.1/css/all.min.css" />
+  <link href="3rdparty/vhv-font/vhv.css?1.521" rel="stylesheet" type="text/css">
+  <link type="text/css" rel="stylesheet" href="Common/css/newUI.css" />
+
+  <style>
+    body {
+      background: url("App/images/background/34a5c89879d04bd0b22d4754040a4df9.jpg") repeat;
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #333;
+      padding: 0;
+      margin: 0;
+    }
+
+    /* Phong cách Cổng thông tin Giáo dục */
+    .clb-header-box {
+      background: #005aab;
+      color: #fff;
+      padding: 9px 15px;
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #f39c12;
+    }
+
+    .clb-header-box h1 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+    }
+
+    .clb-intro-p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+
+    /* Thanh điều hướng 9 CLB nhanh */
+    .clb-quick-nav {
+      background: #f4f7fa;
+      border: 1px solid #dce4ec;
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin-bottom: 25px;
+    }
+
+    .clb-quick-nav-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: #005aab;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .clb-quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .clb-tag-link {
+      display: inline-block;
+      font-size: 12px;
+      padding: 5px 10px;
+      background: #fff;
+      color: #1e3a8a;
+      border: 1px solid #cbd5e1;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    .clb-tag-link:hover,
+    .clb-tag-link.active {
+      background: #005aab;
+      color: #fff;
+      border-color: #005aab;
+      text-decoration: none;
+    }
+
+    /* Thẻ từng Câu lạc bộ */
+    .clb-card {
+      background: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      margin-bottom: 26px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      transition: box-shadow 0.2s;
+    }
+
+    .clb-card:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      border-color: #93c5fd;
+    }
+
+    .clb-card-header {
+      background: #f8fafc;
+      border-bottom: 2px solid #005aab;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .clb-card-title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #005aab;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .clb-card-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .clb-card-body {
+      padding: 14px 16px;
+    }
+
+    .clb-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+      background: #f9fafb;
+      border: 1px solid #f1f5f9;
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .clb-info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .clb-info-item strong {
+      color: #0f172a;
+      display: inline-block;
+      min-width: 110px;
+    }
+
+    .clb-info-item span {
+      color: #475569;
+    }
+
+    .clb-slogan {
+      background: #eff6ff;
+      border-left: 4px solid #005aab;
+      padding: 8px 14px;
+      font-style: italic;
+      color: #1e40af;
+      font-size: 13px;
+      margin-bottom: 14px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .clb-section-subtitle {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 14px 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .clb-section-subtitle i {
+      color: #005aab;
+      font-size: 13px;
+    }
+
+    .clb-list-bullets {
+      margin: 0 0 12px 0;
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #374151;
+    }
+
+    .clb-list-bullets li {
+      margin-bottom: 4px;
+    }
+
+    /* Hộp thông báo đăng ký */
+    .clb-join-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 5px solid #d97706;
+      border-radius: 4px;
+      padding: 18px 20px;
+      margin-top: 30px;
+    }
+
+    .clb-join-box h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #b45309;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Sidebar right */
+    .clb-sidebar-panel {
+      border: 1px solid #dce4ec;
+      border-radius: 4px;
+      background: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .clb-sidebar-title {
+      background: #005aab;
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 3px 3px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .clb-sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .clb-sidebar-list li {
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .clb-sidebar-list li:last-child {
+      border-bottom: none;
+    }
+
+    .clb-sidebar-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 14px;
+      color: #334155;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .clb-sidebar-list a:hover {
+      background: #f0f7ff;
+      color: #005aab;
+      font-weight: 500;
+    }
+
+    .clb-sidebar-list a i {
+      color: #005aab;
+      margin-right: 8px;
+    }
+
+    /* Menu standard styles */
+
+    /* Menu Mobi: Ẩn hoàn toàn trên màn hình máy tính (Desktop) */
+    @media (min-width: 769px) {
+      .menu-mobi {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-mobi {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: calc(100% - 44px) !important;
+        padding-right: 10px;
+        background: transparent;
+        white-space: nowrap;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .menu-mobi ul.list-menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .menu-mobi ul.list-menu>li {
+        margin-right: 20px;
+      }
+
+      .menu-mobi ul.list-menu>li>a {
+        display: block;
+        white-space: nowrap;
+        color: #fff;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      .menu-mobi::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    /* News ticker and live clock */
+    .news-scroll {
+      width: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-track {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 25s linear infinite;
+    }
+
+    .news-track>div {
+      display: inline-block;
+      margin-right: 20px;
+      text-decoration: none;
+      line-height: 30px;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .news-scroll:hover .news-track {
+      animation-play-state: paused;
+    }
+
+    .chu-chay .time-news {
+      float: left;
+      padding-right: 5px;
+    }
+
+    .chu-chay .right-chuchay {
+      display: flex;
+    }
+
+    .clock {
+      color: #000;
+      line-height: 30px;
+      font-weight: bold;
+    }
+
+    #Date {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      float: left;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .clock ul {
+      margin: 0 auto;
+      padding: 0px;
+      list-style: none;
+      text-align: center;
+      display: inline;
+    }
+
+    .clock ul li {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-block;
+    }
+
+    #point {
+      position: relative;
+      -moz-animation: mymove 1s ease infinite;
+      -webkit-animation: mymove 1s ease infinite;
+    }
+
+    .chu-chay .right-chuchay div {
+      font-weight: bold;
+      color: red;
+      font-size: 14px;
+    }
+
+    #module5 .chu-chay {
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body style="padding:0px;margin:0px;">
+
+  <!-- Region Top: Login & Header -->
+  <div class="region-top">
+    <div id="module10" class="ModuleWrapper">
+      <div class="menu-header1">
+        <div class="columns-widget columns2-10 container">
+          <div class="row">
+            <div class="col-right col-xs-12 col-md-10 col-sm-10 pull-right"></div>
+            <div class="col-left col-xs-12 col-md-2 col-sm-2">
+              <div id="module11" class="ModuleWrapper">
+                <ul class="header-login-vt header-login-edu-division">
+                  <li><a class="btn_signin" href="page/login"><i class="vi vi-log-in"></i> <span>Đăng nhập</span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="region-full-content"></div>
+
+  <!-- Whole Page Header -->
+  <div id="whole-page">
+    <div id="page-header">
+      <div id="module1" class="ModuleWrapper">
+        <div class="header-default header-default-type3 clearfix">
+          <div class="container">
+            <div class="header-wrapper">
+              <div class="banner">
+                <a href="./" title="Trang chủ"><img class="full-width"
+                    src="upload/33152/20211022/THPT-Nghi-Loc-3_3c0515ae77.gif" alt="Trường THPT Nghi Lộc 3" /></a>
+              </div>
+              <div class="header-text">
+                <div class="form-inline">
+                  <div class="form-group search-header d-inline-b a-middle">
+                    <form id="form1">
+                      <input class="form-control input-sm" type="text" name="keyword" placeholder="Tìm kiếm...">
+                      <button name="submit" type="button" class="btn btn-sm btn-search"><i
+                          class="icon-search fa fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Bar & Clock wrapped in boxed container -->
+      <div id="module2" class="ModuleWrapper">
+        <div id="column1-2" class="column1 container">
+          <div class="foverlay"></div>
+          <div class="columns-widget row">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+
+              <!-- Navigation Bar -->
+              <div id="module4" class="ModuleWrapper">
+                <nav aria-label="Thực đơn" id="menu4"
+                  class="navigation-menu-default-type1 navigation-menu-default-type2" style="overflow: hidden;">
+                  <div class="navbar navbar-default">
+                    <div>
+                      <div class="navbar-header">
+                        <div class="menu-mobi">
+                          <ul class="list-menu" id="menu4-mobi">
+                            <li class="li-block"><a href="gioi-thieu" title="GIỚI THIỆU">GIỚI THIỆU</a></li>
+                            <li class="li-block"><a href="co-cau-to-chuc" title="CƠ CẤU TỔ CHỨC">CƠ CẤU TỔ CHỨC</a>
+                            </li>
+                            <li class="li-block"><a href="thong-bao" title="Thông báo">Thông báo</a></li>
+                            <li class="li-block"><a href="tin-hoat-dong" title="Tin hoạt động">Tin hoạt động</a></li>
+                            <li class="li-block active"><a href="cau-lac-bo" title="CÂU LẠC BỘ">CÂU LẠC BỘ</a></li>
+                            <li class="li-block"><a href="tai-nguyen" title="Tài nguyên">Tài nguyên</a></li>
+                            <li class="li-block"><a href="/cuu-gc-cuu-hs" title="Cựu GC - HS">Cựu GC - HS</a></li>
+                            <li class="li-block"><a href="/huongnghieptuyensinh" title="KẾ HOẠCH">KẾ HOẠCH</a></li>
+                            <li class="li-block"><a href="/khuyen-hoc-khuyen-tai" title="Khuyến học">Khuyến học</a></li>
+                          </ul>
+                        </div>
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                          data-target="#bs-navbar-collapse-4" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                      </div>
+
+                      <div class="collapse navbar-collapse fluid-nav" id="bs-navbar-collapse-4">
+                        <div class="intestine-collapse">
+                          <ul id="fluid-nav-positive4" role="tablist" class="nav navbar-nav fluid-nav-positive">
+                            <li role="presentation" class="item dropdown">
+                              <a rel="noopener" href="gioi-thieu" title="GIỚI THIỆU"><span class="title">GIỚI
+                                  THIỆU</span> <span class="caret" style="margin-left:5px;"></span></a>
+                              <ul class="dropdown-menu">
+                                <li role="presentation" class="item"><a href="gioi-thieu/lich-su-phat-trien"><span
+                                      class="title">Giới thiệu về nhà trường</span></a></li>
+                                <li role="presentation" class="item"><a href="gioi-thieu/danh-hieu-nha-truong2"><span
+                                      class="title">Danh hiệu đạt được</span></a></li>
+                                <li role="presentation" class="item"><a
+                                    href="gioi-thieu/chuong-trinh-ky-niem-45-nam-thanh-lap-truong-1980-2025"><span
+                                      class="title">Kỷ niệm 45 năm thành lập trường</span></a></li>
+                              </ul>
+                            </li>
+
+                            <li role="presentation" class="item dropdown">
+                              <a rel="noopener" href="co-cau-to-chuc" title="CƠ CẤU TỔ CHỨC"><span class="title">CƠ CẤU
+                                  TỔ CHỨC</span> <span class="caret" style="margin-left:5px;"></span></a>
+                              <ul class="dropdown-menu">
+                                <li role="presentation" class="item"><a href="co-cau-to-chuc/ban-giam-hieu"><span
+                                      class="title">BAN GIÁM HIỆU</span></a></li>
+                                <li role="presentation" class="item"><a href="co-cau-to-chuc/doan-thanh-nien"><span
+                                      class="title">ĐOÀN THANH NIÊN</span></a></li>
+                                <li role="presentation" class="item"><a href="co-cau-to-chuc/to-tu-nhien"><span
+                                      class="title">TỔ TỰ NHIÊN</span></a></li>
+                                <li role="presentation" class="item"><a href="co-cau-to-chuc/to-xa-hoi"><span
+                                      class="title">TỔ XÃ HỘI</span></a></li>
+                                <li role="presentation" class="item"><a href="co-cau-to-chuc/to-van-ngoai-ngu"><span
+                                      class="title">TỔ VĂN - NGOẠI NGỮ</span></a></li>
+                                <li role="presentation" class="item"><a href="co-cau-to-chuc/to-toan-tin"><span
+                                      class="title">TỔ TOÁN - TIN</span></a></li>
+                              </ul>
+                            </li>
+
+                            <li role="presentation" class="item dropdown">
+                              <a rel="noopener" href="thong-bao" title="Thông báo"><span class="title">Thông báo</span>
+                                <span class="caret" style="margin-left:5px;"></span></a>
+                              <ul class="dropdown-menu">
+                                <li role="presentation" class="item"><a href="thong-bao/thong-bao-cua-truong"><span
+                                      class="title">Thông báo của trường</span></a></li>
+                                <li role="presentation" class="item"><a href="thong-bao/lich-cong-tac"><span
+                                      class="title">Lịch công tác</span></a></li>
+                              </ul>
+                            </li>
+
+                            <li role="presentation" class="item dropdown">
+                              <a rel="noopener" href="tin-hoat-dong" title="Tin hoạt động"><span class="title">Tin hoạt
+                                  động</span> <span class="caret" style="margin-left:5px;"></span></a>
+                              <ul class="dropdown-menu">
+                                <li role="presentation" class="item"><a href="tin-hoat-dong/hoat-dong-nha-truong"><span
+                                      class="title">Hoạt động nhà trường</span></a></li>
+                                <li role="presentation" class="item"><a href="tin-hoat-dong/hoat-dong-doan-the"><span
+                                      class="title">Hoạt động đoàn thể</span></a></li>
+                                <li role="presentation" class="item"><a href="tin-hoat-dong/hoat-dong-ngoai-khoa"><span
+                                      class="title">Hoạt động ngoại khóa</span></a></li>
+                              </ul>
+                            </li>
+
+                            <!-- MỤC CÂU LẠC BỘ (ACTIVE) -->
+                            <li role="presentation" class="item dropdown active">
+                              <a rel="noopener" href="cau-lac-bo" title="CÂU LẠC BỘ">
+                                <span class="title">CÂU LẠC BỘ</span>
+                                <span class="caret" style="margin-left:5px;"></span>
+                              </a>
+                              <ul class="dropdown-menu" style="min-width: 250px;">
+                                <li role="presentation" class="item"><a href="cau-lac-bo"><strong
+                                      style="color:#005aab;"><i class="fa fa-list-ul"></i> Giới thiệu chung 9
+                                      CLB</strong></a></li>
+                                <li class="divider" style="margin:4px 0;"></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-truyen-thong"><span
+                                      class="title">1. CLB Truyền thông</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-am-nhac"><span
+                                      class="title">2. CLB Âm nhạc</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-sach-va-hanh-dong"><span
+                                      class="title">3. CLB Sách và Hành động</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-khoa-hoc-tu-nhien"><span
+                                      class="title">4. CLB Khoa học Tự nhiên</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-chuyen-doi-so"><span
+                                      class="title">5. CLB Chuyển đổi số</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-tieng-anh"><span
+                                      class="title">6. CLB Tiếng Anh</span></a></li>
+                                <li role="presentation" class="item"><a
+                                    href="cau-lac-bo#clb-thanh-nien-tinh-nguyen"><span class="title">7. CLB Thanh niên
+                                      Tình nguyện</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-van-hoc"><span
+                                      class="title">8. CLB Văn học</span></a></li>
+                                <li role="presentation" class="item"><a href="cau-lac-bo#clb-the-duc-the-thao"><span
+                                      class="title">9. CLB Thể dục Thể thao</span></a></li>
+                              </ul>
+                            </li>
+
+                            <li role="presentation" class="item dropdown">
+                              <a rel="noopener" href="tai-nguyen" title="Tài nguyên"><span class="title">Tài
+                                  nguyên</span> <span class="caret" style="margin-left:5px;"></span></a>
+                              <ul class="dropdown-menu">
+                                <li role="presentation" class="item"><a href="/thoi-khoa-bieu"><span class="title">Thời
+                                      khóa biểu</span></a></li>
+                                <li role="presentation" class="item"><a href="tai-nguyen/hinh-anh"><span
+                                      class="title">Hình ảnh</span></a></li>
+                              </ul>
+                            </li>
+
+                            <li role="presentation" class="item"><a rel="noopener" href="/cuu-gc-cuu-hs"
+                                title="Cựu GC - HS"><span class="title">Cựu GC - HS</span></a></li>
+                            <li role="presentation" class="item"><a rel="noopener" href="/huongnghieptuyensinh"
+                                title="KẾ HOẠCH"><span class="title">KẾ HOẠCH</span></a></li>
+                            <li role="presentation" class="item"><a rel="noopener" href="/khuyen-hoc-khuyen-tai"
+                                title="Khuyến học"><span class="title">Khuyến học</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+
+              <!-- Clock & Announcement bar -->
+              <div id="module5" class="ModuleWrapper">
+                <div class="chu-chay">
+                  <div class="">
+                    <div class="time-news" style="">
+                      <div class="top-header clearfix">
+                        <div class="time-header">
+                          <div class="clock">
+                            <div id="Date">Thứ 7, 12/9/2026</div>
+                            <ul>
+                              <li id="hours">13</li>
+                              <li id="point">:</li>
+                              <li id="min">30</li>
+                              <li id="point">:</li>
+                              <li id="sec">00</li>
+                            </ul>
+                            <span id="am-pm"></span>
+                            <div class="clear-both"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="right-chuchay news-scroll" id="newsScroll5">
+                    <div class="news-track" id="newsTrack5">
+                      <div>THI ĐUA LẬP THÀNH TÍCH CHÀO MỪNG KỶ NIỆM 45 NĂM NGÀY THÀNH LẬP TRƯỜNG (9/1980 - 9/2025)</div>
+                      <div>THI ĐUA LẬP THÀNH TÍCH CHÀO MỪNG KỶ NIỆM 45 NĂM NGÀY THÀNH LẬP TRƯỜNG (9/1980 - 9/2025)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End #page-header -->
+
+    <!-- Page Content Container -->
+    <div id="page-content" style="margin-top: 10px;">
+      <div id="module13" class="ModuleWrapper">
+        <div id="column1-13" class="column1 container">
+          <div class="foverlay"></div>
+          <div class="columns-widget row">
+            <div class="col-md-12 col-xs-12 col-sm-12">
+              <div id="module14" class="ModuleWrapper">
+                <div class="backgound-white-container"
+                  style="background:#fff; border:1px solid #e2e8f0; border-radius:4px; padding: 15px 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);">
+
+                  <!-- Breadcrumbs -->
+                  <div class="pathway-category"
+                    style="margin-bottom: 15px; border-bottom: 1px solid #f1f5f9; padding-bottom: 8px;">
+                    <ol class="breadcrumb clearfix"
+                      style="background:transparent; padding:0; margin:0; font-size:13px;">
+                      <li class="first-item"><a href="./" title="Trang chủ" style="color:#005aab;"><i
+                            class="fa fa-home"></i> Trang chủ</a></li>
+                      <li><a href="tin-hoat-dong/hoat-dong-doan-the" style="color:#005aab;">Hoạt động Đoàn trường</a>
+                      </li>
+                      <li class="active" style="color:#64748b;">Hệ thống 9 Câu lạc bộ học sinh</li>
+                    </ol>
+                  </div>
+
+                  <!-- 2 Columns Layout -->
+                  <div class="row">
+
+                    <!-- MAIN LEFT COLUMN (8 cols) -->
+                    <div class="col-left col-xs-12 col-md-8 col-sm-8">
+
+                      <!-- Banner Header -->
+                      <div class="clb-header-box">
+                        <h1><i class="fa fa-users"></i> HỆ THỐNG CÁC CÂU LẠC BỘ HỌC SINH TRƯỜNG THPT NGHI LỘC 3</h1>
+                        <span
+                          style="font-size:12px; background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:3px;">Năm
+                          học 2026 - 2027</span>
+                      </div>
+
+                      <div style="padding: 16px 4px 10px 4px;">
+                        <p class="clb-intro-p">
+                          Thực hiện chương trình công tác Đoàn và phong trào thanh niên trường học, nhằm tạo môi trường
+                          giáo dục toàn diện, phát huy năng khiếu, sở trường và rèn luyện kỹ năng thực hành xã hội cho
+                          đoàn viên thanh niên theo định hướng Chương trình GDPT 2018; <strong>Ban Chấp hành Đoàn trường
+                            THPT Nghi Lộc 3</strong> duy trì và phát triển mô hình sinh hoạt của <strong>9 Câu lạc bộ
+                            học sinh</strong> nòng cốt. Đây là sân chơi lành mạnh, bổ ích, giúp các em học sinh thỏa
+                          niềm đam mê, rèn luyện kỹ năng mềm, nâng cao tinh thần làm việc nhóm và tự tin hội nhập.
+                        </p>
+
+                        <!-- Thanh liên kết nhanh 9 CLB -->
+                        <div class="clb-quick-nav">
+                          <div class="clb-quick-nav-title"><i class="fa fa-bookmark"></i> Danh mục chọn nhanh 9 Câu lạc
+                            bộ:</div>
+                          <div class="clb-quick-tags">
+                            <a class="clb-tag-link" href="#clb-truyen-thong"><i class="fa fa-camera"></i> 1. Truyền
+                              thông</a>
+                            <a class="clb-tag-link" href="#clb-am-nhac"><i class="fa fa-music"></i> 2. Âm nhạc</a>
+                            <a class="clb-tag-link" href="#clb-sach-va-hanh-dong"><i class="fa fa-book"></i> 3. Sách &
+                              Hành động</a>
+                            <a class="clb-tag-link" href="#clb-khoa-hoc-tu-nhien"><i class="fa fa-flask"></i> 4. Khoa
+                              học Tự nhiên</a>
+                            <a class="clb-tag-link" href="#clb-chuyen-doi-so"><i class="fa fa-laptop-code"></i> 5.
+                              Chuyển đổi số</a>
+                            <a class="clb-tag-link" href="#clb-tieng-anh"><i class="fa fa-language"></i> 6. Tiếng
+                              Anh</a>
+                            <a class="clb-tag-link" href="#clb-thanh-nien-tinh-nguyen"><i
+                                class="fa fa-hands-helping"></i> 7. TNTN Tình nguyện</a>
+                            <a class="clb-tag-link" href="#clb-van-hoc"><i class="fa fa-feather-alt"></i> 8. Văn học</a>
+                            <a class="clb-tag-link" href="#clb-the-duc-the-thao"><i class="fa fa-futbol"></i> 9. Thể dục
+                              Thể thao</a>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   1. CLB TRUYỀN THÔNG
+                   ============================================== -->
+                        <div class="clb-card" id="clb-truyen-thong">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-camera-retro"></i> 1. CÂU LẠC BỘ TRUYỀN THÔNG
+                              (NMC - NGHI LOC 3 MEDIA CLUB)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Ghi dấu khoảnh khắc - Lan tỏa yêu thương - Kết nối tự
+                              hào THPT Nghi Lộc 3"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>BCH Đoàn trường & Tổ
+                                  Tin học</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Học sinh khối 11, 12 phụ
+                                  trách</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 hàng
+                                  tuần & các sự kiện trường</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng Đoàn trường &
+                                  Phòng Đa chức năng</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              CLB Truyền thông là kênh truyền thông chính thức của học sinh, đảm nhận vai trò ghi lại
+                              những khoảnh khắc đẹp trong mọi hoạt động giảng dạy, học tập, văn hóa, thể thao của thầy
+                              và trò nhà trường. Xây dựng hình ảnh học sinh Nghi Lộc 3 năng động, sáng tạo và chuẩn mực
+                              trên các phương tiện thông tin đại chúng.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-cogs"></i> Cơ cấu các ban chuyên môn:
+                            </div>
+                            <ul class="clb-list-bullets">
+                              <li><strong>Ban Nội dung (Content):</strong> Lên ý tưởng bài viết, viết tin tức, bài phóng
+                                sự, kịch bản video, phỏng vấn giáo viên và học sinh tiêu biểu.</li>
+                              <li><strong>Ban Kỹ thuật (Photo & Video):</strong> Chụp ảnh sự kiện, quay video ngày hội,
+                                phóng sự hoạt động, điều khiển flycam và thiết bị quay chụp.</li>
+                              <li><strong>Ban Thiết kế đồ họa (Design):</strong> Thiết kế banner, poster, infographic cổ
+                                động các phong trào, bản tin tuần, kỷ yếu học sinh.</li>
+                            </ul>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Phối hợp quản trị trang Fanpage chính thức của trường và kênh thông tin Đoàn trường.
+                              </li>
+                              <li>Phóng sự ảnh chào đón năm học mới, lễ Khai giảng, chuỗi hoạt động Kỷ niệm ngày Nhà
+                                giáo Việt Nam 20/11, ngày thành lập Đoàn 26/3.</li>
+                              <li>Bản tin truyền hình học đường "Nghi Lộc 3 News" định kỳ hàng tháng.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   2. CLB ÂM NHẠC
+                   ============================================== -->
+                        <div class="clb-card" id="clb-am-nhac">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-music"></i> 2. CÂU LẠC BỘ ÂM NHẠC (MUSIC CLUB)
+                            </h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Giai điệu kết nối tâm hồn - Đam mê thắp sáng sân trường"
+                            </div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ Xã hội & Giáo viên
+                                  Âm nhạc/Nghệ thuật</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội trưởng đội Văn nghệ
+                                  xung kích</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 7 hàng
+                                  tuần</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng Hội đồng & Hội
+                                  trường nhà trường</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Tạo sân chơi cho các bạn học sinh yêu thích ca hát, nhạc cụ và vũ đạo; bồi dưỡng và phát
+                              hiện các nhân tố nghệ thuật tiêu biểu, xây dựng đội văn nghệ nòng cốt phục vụ các sự kiện
+                              chính trị, ngày lễ lớn và các kỳ hội thi nghệ thuật các cấp.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-cogs"></i> Cơ cấu các nhóm hoạt động:
+                            </div>
+                            <ul class="clb-list-bullets">
+                              <li><strong>Nhóm Thanh nhạc:</strong> Luyện thanh, bè phối, biểu diễn ca khúc cách mạng,
+                                dân ca xứ Nghệ, ca khúc tuổi trẻ và học đường.</li>
+                              <li><strong>Nhóm Nhạc cụ:</strong> Guitar acoustic, organ, trống cajon, sáo trúc và nhạc
+                                cụ dân tộc.</li>
+                              <li><strong>Nhóm Vũ đạo (Dance/Múa):</strong> Biên đạo múa đương đại, múa dân gian dân tộc
+                                và nhảy hiện đại sôi động.</li>
+                            </ul>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Hội diễn văn nghệ "Tri ân thầy cô" chào mừng ngày Nhà giáo Việt Nam 20/11.</li>
+                              <li>Chương trình biểu diễn Acoustic góc sân trường trong các giờ sinh hoạt ngoại khóa và
+                                giờ ra chơi.</li>
+                              <li>Tham gia và đạt giải cao tại Hội thi "Giai điệu tuổi hồng" do Sở GD&ĐT Nghệ An tổ
+                                chức.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   3. CLB SÁCH VÀ HÀNH ĐỘNG
+                   ============================================== -->
+                        <div class="clb-card" id="clb-sach-va-hanh-dong">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-book-reader"></i> 3. CÂU LẠC BỘ SÁCH VÀ HÀNH ĐỘNG
+                            </h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Đọc sách để mở mang trí tuệ - Hành động để kiến tạo
+                              tương lai"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Cán bộ Thư viện
+                                  trường & Tổ Ngữ văn</span></div>
+                              <div class="clb-info-item"><strong>Ban Điều hành:</strong> <span>Đội ngũ cộng tác viên Thư
+                                  viện xanh</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Giờ ra chơi các
+                                  ngày & Chiều thứ 5</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Thư viện trường &
+                                  Không gian đọc mở</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Lan tỏa và xây dựng thói quen đọc sách mỗi ngày cho đoàn viên thanh niên; khuyến khích
+                              tinh thần tự học, tự nghiên cứu; kết hợp lý thuyết trên trang sách với hành động cụ thể vì
+                              cộng đồng và bảo vệ môi trường.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Dự án <strong>"Tủ sách lớp học"</strong>: Vận động quyên góp sách hay, xây dựng tủ
+                                sách dùng chung tại các chi đoàn.</li>
+                              <li>Chiến dịch <strong>"Đổi giấy lấy cây - Đổi sách trao tri thức"</strong> gây quỹ ủng hộ
+                                học sinh có hoàn cảnh khó khăn.</li>
+                              <li>Tổ chức <strong>Ngày hội Văn hóa Đọc</strong> và tọa đàm chia sẻ phương pháp đọc sách
+                                hiệu quả vào tháng 4 hàng năm.</li>
+                              <li>Review sách hay mỗi tuần trên bảng tin Thư viện trường và chuyên trang phát thanh học
+                                đường.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   4. CLB KHOA HỌC TỰ NHIÊN
+                   ============================================== -->
+                        <div class="clb-card" id="clb-khoa-hoc-tu-nhien">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-flask"></i> 4. CÂU LẠC BỘ KHOA HỌC TỰ NHIÊN &
+                              STEM</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Khám phá bí ẩn tự nhiên - Sáng tạo vì cuộc sống"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ trưởng chuyên môn
+                                  Lý - Hóa - Sinh</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội tuyển HSG và NCKH các
+                                  khối lớp</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 cách
+                                  tuần</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng Thực hành Lý -
+                                  Hóa - Sinh</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Khơi gợi niềm say mê khoa học, kích thích tư duy logic và khả năng vận dụng kiến thức
+                              Toán, Vật lý, Hóa học, Sinh học vào giải quyết các vấn đề thực tiễn; là cái nôi ươm mầm
+                              các dự án tham dự Cuộc thi Sáng tạo Khoa học Kỹ thuật (KHKT) các cấp.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Tổ chức <strong>Ngày hội STEM cấp trường</strong> với các gian hàng trưng bày sản phẩm
+                                khoa học ứng dụng.</li>
+                              <li>Cuộc thi chế tạo bắn tên lửa nước, mô hình cầu chịu lực, hệ thống lọc nước mi-ni thân
+                                thiện môi trường.</li>
+                              <li>Bồi dưỡng kỹ năng lập hồ sơ nghiên cứu, báo cáo khoa học và thuyết trình đề tài KHKT
+                                trước hội đồng chuyên môn.</li>
+                              <li>Các buổi thực hành thí nghiệm vui, khám phá hóa học đời sống và thế giới sinh vật học
+                                địa phương.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   5. CLB CHUYỂN ĐỔI SỐ
+                   ============================================== -->
+                        <div class="clb-card" id="clb-chuyen-doi-so">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-laptop-code"></i> 5. CÂU LẠC BỘ CHUYỂN ĐỔI SỐ &
+                              CÔNG NGHỆ THÔNG TIN</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Tiên phong kỹ năng số - Nâng tầm học đường thời đại 4.0"
+                            </div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Giáo viên bộ môn Tin
+                                  học & Quản trị mạng</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Học sinh xuất sắc môn Tin
+                                  học</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 7 tuần 2
+                                  và tuần 4</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng máy vi tính số
+                                  1 & 2</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Đẩy mạnh phong trào chuyển đổi số trong học sinh; trang bị kỹ năng tin học văn phòng, kỹ
+                              năng an toàn không gian mạng, sử dụng hiệu quả nền tảng học tập trực tuyến (K12Online,
+                              VnEdu); làm quen với lập trình cơ bản và ứng dụng công nghệ trong học tập.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Tổ chức các buổi tập huấn chuyên đề <strong>"Văn hóa ứng xử văn minh và bảo mật an
+                                  toàn trên Internet"</strong>.</li>
+                              <li>Hỗ trợ giáo viên và học sinh kỹ thuật trong các kỳ thi trắc nghiệm trực tuyến và hội
+                                thảo qua cầu truyền hình.</li>
+                              <li>Nhóm học tập lập trình ứng dụng (Python, Scratch, Web cơ bản) giải các bài toán tin
+                                học học sinh giỏi.</li>
+                              <li>Số hóa tài liệu, hỗ trợ Thư viện điện tử và biên tập dữ liệu học tập dùng chung cho
+                                trường.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   6. CLB TIẾNG ANH
+                   ============================================== -->
+                        <div class="clb-card" id="clb-tieng-anh">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-language"></i> 6. CÂU LẠC BỘ TIẾNG ANH (NEC -
+                              NGHI LOC 3 ENGLISH CLUB)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Speak to Inspire - Confident to Connect - Vươn ra thế
+                              giới"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ trưởng & Giáo viên
+                                  Tổ Văn - Ngoại ngữ</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Học sinh giỏi tiếng Anh
+                                  các lớp chọn</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 hàng
+                                  tuần (100% English)</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng học Ngoại ngữ
+                                  tương tác</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Xây dựng môi trường giao tiếp tiếng Anh tự nhiên, thân thiện và không sợ sai; nâng cao
+                              năng lực nghe - nói - phản xạ, mở rộng vốn từ vựng và hiểu biết văn hóa quốc tế; đồng hành
+                              cùng học sinh chuẩn bị tốt cho các kỳ thi IELTS và Tốt nghiệp THPT.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Sinh hoạt chuyên đề bằng tiếng Anh: Thuyết trình theo chủ đề (Môi trường, Nghề nghiệp,
+                                Văn hóa quê hương Nghệ An).</li>
+                              <li>Sân chơi <strong>"Rung chuông vàng Tiếng Anh - Ring the Golden Bell"</strong> toàn
+                                trường.</li>
+                              <li>Câu lạc bộ Hùng biện tiếng Anh (English Debate Club) theo format tranh biện quốc tế.
+                              </li>
+                              <li>Giao lưu ngoại khóa với các tình nguyện viên và giáo viên người bản ngữ.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   7. CLB THANH NIÊN TÌNH NGUYỆN
+                   ============================================== -->
+                        <div class="clb-card" id="clb-thanh-nien-tinh-nguyen">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-hands-helping"></i> 7. CÂU LẠC BỘ THANH NIÊN TÌNH
+                              NGUYỆN</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Đâu cần thanh niên có - Đâu khó có thanh niên Nghi Lộc
+                              3"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chỉ đạo:</strong> <span>Bí thư & Phó Bí thư Đoàn
+                                  trường</span></div>
+                              <div class="clb-info-item"><strong>Ban Chỉ huy:</strong> <span>Đội trưởng Đội Thanh niên
+                                  xung kích</span></div>
+                              <div class="clb-info-item"><strong>Thời gian hoạt động:</strong> <span>Thường xuyên & Các
+                                  chiến dịch cao điểm</span></div>
+                              <div class="clb-info-item"><strong>Địa bàn:</strong> <span>Khuôn viên trường & các xã lân
+                                  cận huyện Nghi Lộc</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Phát huy tinh thần xung kích, tình nguyện của tuổi trẻ vì cuộc sống cộng đồng; giáo dục
+                              lòng nhân ái, tinh thần trách nhiệm với xã hội; giữ gìn nền nếp kỷ cương, trật tự an toàn
+                              giao thông khu vực cổng trường và bảo vệ môi trường học đường.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Đội hình <strong>"Cổng trường An toàn Giao thông"</strong>: Phân luồng, hướng dẫn học
+                                sinh và phụ huynh chấp hành luật giao thông giờ cao điểm.</li>
+                              <li>Chương trình <strong>"Tiếp sức mùa thi"</strong> kỳ thi Tuyển sinh vào lớp 10 và Tốt
+                                nghiệp THPT hàng năm.</li>
+                              <li>Phong trào <strong>"Chủ nhật xanh"</strong>: Vệ sinh trường lớp, chăm sóc bồn hoa cây
+                                cảnh, dọn rác bãi biển Cửa Lò - Nghi Lộc.</li>
+                              <li>Thăm hỏi, tặng quà các gia đình chính sách, Bà mẹ Việt Nam Anh hùng, quyên góp áo ấm
+                                mùa đông cho học sinh nghèo.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   8. CLB VĂN HỌC
+                   ============================================== -->
+                        <div class="clb-card" id="clb-van-hoc">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-feather-alt"></i> 8. CÂU LẠC BỘ VĂN HỌC (KHÁT
+                              VỌNG XANH)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Nơi hội tụ những tâm hồn yêu cái đẹp - Nuôi dưỡng ngòi
+                              bút nhân văn"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ trưởng & Các thầy
+                                  cô giáo Tổ Ngữ văn</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội tuyển HSG Văn các
+                                  khối 10, 11, 12</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 tuần 1
+                                  và tuần 3</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng truyền thống
+                                  trường</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Tạo diễn đàn cho những bạn học sinh có năng khiếu viết văn, làm thơ, cảm thụ cái đẹp của
+                              văn chương; trau dồi tình yêu tiếng mẹ đẻ, bồi dưỡng tâm hồn trong sáng, nhân hậu; rèn
+                              luyện kỹ năng viết bài nghị luận, sáng tác tản văn và kịch bản văn học.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Biên tập và phát hành <strong>Tập san Tri ân</strong> chào mừng ngày Nhà giáo Việt Nam
+                                20/11 và kỷ niệm thành lập trường.</li>
+                              <li>Tổ chức hoạt động <strong>"Sân khấu hóa tác phẩm văn học"</strong> (chuyển thể kịch
+                                bản 'Vợ nhặt', 'Chí Phèo', 'Truyện Kiều'...).</li>
+                              <li>Cuộc thi viết tản văn "Ký ức mái trường Nghi Lộc 3" và diễn đàn bình thơ đầu tuần dưới
+                                cờ.</li>
+                              <li>Giao lưu với các nhà văn, nhà thơ và giáo viên dạy giỏi tỉnh Nghệ An.</li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   9. CLB THỂ DỤC THỂ THAO
+                   ============================================== -->
+                        <div class="clb-card" id="clb-the-duc-the-thao">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-running"></i> 9. CÂU LẠC BỘ THỂ DỤC THỂ THAO
+                              (SPORTS CLUB)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Rèn luyện thân thể theo gương Bác Hồ vĩ đại - Khỏe để
+                              học tập và xây dựng Tổ quốc"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Giáo viên nhóm Thể
+                                  dục - GDQPAN</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội trưởng các đội tuyển
+                                  thể thao học sinh</span></div>
+                              <div class="clb-info-item"><strong>Thời gian tập luyện:</strong> <span>Các buổi chiều sau
+                                  giờ học (16h30 - 17h45)</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm hoạt động:</strong> <span>Sân bóng đá cỏ nhân
+                                  tạo, Sân bóng chuyền, Nhà thi đấu</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Rèn luyện thể lực, nâng cao sức khỏe, giải tỏa căng thẳng sau các giờ học văn hóa; phát
+                              triển tinh thần đồng đội, tính kỷ luật và ý chí kiên cường; phát hiện và bồi dưỡng các vận
+                              động viên nòng cốt cho đội tuyển trường tham gia Hội khỏe Phù Đổng các cấp.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-cogs"></i> Các phân môn hoạt động thường
+                              xuyên:</div>
+                            <ul class="clb-list-bullets">
+                              <li><strong>Bóng đá nam & Bóng đá nữ:</strong> Tổ chức giải bóng đá học sinh truyền thống
+                                tranh Cup Nghi Lộc 3.</li>
+                              <li><strong>Bóng chuyền:</strong> Đội bóng chuyền nam, nữ rèn luyện kỹ thuật đệm bóng,
+                                phát bóng, chiến thuật phối hợp.</li>
+                              <li><strong>Cầu lông & Bóng bàn:</strong> Luyện tập phản xạ nhanh, kỹ thuật đánh đơn và
+                                đánh đôi.</li>
+                              <li><strong>Điền kinh & Cờ vua:</strong> Bồi dưỡng vận động viên chạy cự ly ngắn, nhảy
+                                cao, nhảy xa và môn thể thao trí tuệ Cờ vua.</li>
+                            </ul>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Giải bóng đá học sinh THPT Nghi Lộc 3 chào mừng ngày thành lập Đoàn TNCS Hồ Chí Minh
+                                26/3.</li>
+                              <li>Giải bóng chuyền truyền thống cán bộ - giáo viên - học sinh nhân dịp 20/11.</li>
+                              <li>Tham gia Hội khỏe Phù Đổng cấp cụm và cấp tỉnh đạt nhiều huy chương Vàng, Bạc, Đồng.
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <!-- HỘP HƯỚNG DẪN ĐĂNG KÝ -->
+                        <div class="clb-join-box">
+                          <h3><i class="fa fa-edit"></i> HƯỚNG DẪN ĐĂNG KÝ THAM GIA CÁC CÂU LẠC BỘ NĂM HỌC 2026 - 2027
+                          </h3>
+                          <p style="font-size:13px; line-height:1.7; color:#78350f; margin-bottom:10px;">
+                            Tất cả các bạn học sinh khối 10, 11, 12 Trường THPT Nghi Lộc 3 có đam mê, nhiệt huyết và
+                            mong muốn rèn luyện kỹ năng đều có thể đăng ký tham gia tối đa <strong>02 Câu lạc
+                              bộ</strong> phù hợp với năng khiếu và thời gian biểu của bản thân.
+                          </p>
+                          <div style="font-size:13px; color:#92400e; line-height:1.8;">
+                            <strong>1. Thời gian đăng ký đợt 1:</strong> Từ ngày 15/09 đến hết ngày 30/09/2026.<br>
+                            <strong>2. Hình thức đăng ký:</strong>
+                            <ul style="margin:4px 0 8px 18px; padding:0;">
+                              <li>Đăng ký trực tiếp với Bí thư Chi đoàn lớp để tổng hợp nộp về Văn phòng Đoàn trường.
+                              </li>
+                              <li>Gặp trực tiếp Ban Chủ nhiệm của từng CLB tại bàn tuyển sinh vào các giờ ra chơi tại
+                                sân trường.</li>
+                            </ul>
+                            <strong>3. Quyền lợi thành viên:</strong> Được cấp Giấy chứng nhận tham gia tích cực hoạt
+                            động phong trào; được ưu tiên xét các danh hiệu Đoàn viên xuất sắc, giải thưởng "Học sinh 3
+                            Tốt" các cấp và cộng điểm rèn luyện năm học.
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- SIDEBAR RIGHT (4 cols) -->
+                    <div class="col-right col-xs-12 col-md-4 col-sm-4">
+
+                      <!-- Panel 1: Danh sách 9 CLB -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title"><i class="fa fa-list"></i> Danh sách 9 CLB</div>
+                        <ul class="clb-sidebar-list">
+                          <li><a href="#clb-truyen-thong"><span><i class="fa fa-camera"></i> 1. Truyền thông</span>
+                              <span class="badge" style="background:#005aab;">NMC</span></a></li>
+                          <li><a href="#clb-am-nhac"><span><i class="fa fa-music"></i> 2. Âm nhạc</span> <span
+                                class="badge" style="background:#005aab;">Music</span></a></li>
+                          <li><a href="#clb-sach-va-hanh-dong"><span><i class="fa fa-book"></i> 3. Sách & HĐ</span>
+                              <span class="badge" style="background:#005aab;">B&amp;A</span></a></li>
+                          <li><a href="#clb-khoa-hoc-tu-nhien"><span><i class="fa fa-flask"></i> 4. KHTN & STEM</span>
+                              <span class="badge" style="background:#005aab;">STEM</span></a></li>
+                          <li><a href="#clb-chuyen-doi-so"><span><i class="fa fa-laptop-code"></i> 5. Chuyển đổi
+                                số</span> <span class="badge" style="background:#005aab;">ICT</span></a></li>
+                          <li><a href="#clb-tieng-anh"><span><i class="fa fa-language"></i> 6. Tiếng Anh</span> <span
+                                class="badge" style="background:#005aab;">NEC</span></a></li>
+                          <li><a href="#clb-thanh-nien-tinh-nguyen"><span><i class="fa fa-hands-helping"></i> 7. TNTN
+                                Tình nguyện</span> <span class="badge" style="background:#005aab;">V-Club</span></a>
+                          </li>
+                          <li><a href="#clb-van-hoc"><span><i class="fa fa-feather-alt"></i> 8. Văn học</span> <span
+                                class="badge" style="background:#005aab;">Văn</span></a></li>
+                          <li><a href="#clb-the-duc-the-thao"><span><i class="fa fa-futbol"></i> 9. Thể dục Thể
+                                thao</span> <span class="badge" style="background:#005aab;">Sport</span></a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Panel 2: Ban chỉ đạo -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#0369a1;"><i class="fa fa-sitemap"></i> Ban Chỉ
+                          đạo hoạt động</div>
+                        <div style="padding:12px 15px; font-size:13px; line-height:1.7; color:#475569;">
+                          <p style="margin:0 0 6px 0;"><strong>Trưởng ban chỉ đạo:</strong><br>...</p>
+                          <p style="margin:0 0 6px 0;"><strong>Phó ban thường trực:</strong><br>...</p>
+                          <p style="margin:0 0 6px 0;"><strong>Phối hợp phụ trách:</strong><br>T...</p>
+                        </div>
+                      </div>
+
+                      <!-- Panel 3: Lịch sinh hoạt tuần -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#0284c7;"><i class="fa fa-calendar-alt"></i>
+                          Lịch sinh hoạt chung</div>
+                        <div style="padding:10px 14px; font-size:12px;">
+                          <table class="table table-bordered table-condensed" style="margin-bottom:0; font-size:12px;">
+                            <tr style="background:#f8fafc;">
+                              <th>Buổi</th>
+                              <th>CLB hoạt động</th>
+                            </tr>
+                            <tr>
+                              <td><strong>Chiều Thứ 5</strong></td>
+                              <td>...</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Chiều Thứ 7</strong></td>
+                              <td>...</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Hàng ngày (16h30)</strong></td>
+                              <td>...</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                      <!-- Panel 4: Hoạt động trường gần nhất -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#005aab;"><i class="fa fa-newspaper"></i> Tin
+                          hoạt động mới</div>
+                        <div style="padding:10px 14px; font-size:12px; line-height:1.6;">
+                          <div style="margin-bottom:10px; border-bottom:1px dashed #e2e8f0; padding-bottom:8px;">
+                            <a href="tin-hoat-dong/hoat-dong-nha-truong/ron-ra-tieng-trong-khai-truong-truong-thpt-nghi-loc-3-tung-bung-buoc-vao-nam-hoc-moi-2026-2027.html"
+                              style="color:#005aab; font-weight:600; text-decoration:none;">
+                              Rộn rã tiếng trống khai trường: THPT Nghi Lộc 3 tưng bừng bước vào năm học mới 2026 - 2027
+                            </a>
+                            <div style="color:#94a3b8; font-size:11px; margin-top:3px;"><i class="fa fa-clock"></i>
+                              07/09/2026</div>
+                          </div>
+                          <div style="margin-bottom:10px; border-bottom:1px dashed #e2e8f0; padding-bottom:8px;">
+                            <a href="thong-bao/lich-cong-tac/ke-hoach-tuan-2-tu-ngay-14-09-den-ngay-20-9-2026-.html"
+                              style="color:#005aab; font-weight:600; text-decoration:none;">
+                              Kế hoạch tuần 2 (từ ngày 14/09 đến 20/09/2026)
+                            </a>
+                            <div style="color:#94a3b8; font-size:11px; margin-top:3px;"><i class="fa fa-clock"></i>
+                              11/09/2026</div>
+                          </div>
+                          <div>
+                            <a href="thong-bao/thong-bao-cua-truong/danh-sach-hoc-sinh-trung-tuyen-vao-10-nam-hoc-2026-2027-truong-thpt-nghi-loc-3.html"
+                              style="color:#005aab; font-weight:600; text-decoration:none;">
+                              Danh sách học sinh trúng tuyển vào lớp 10 năm học 2026-2027
+                            </a>
+                            <div style="color:#94a3b8; font-size:11px; margin-top:3px;"><i class="fa fa-clock"></i>
+                              05/08/2026</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Panel 5: Liên kết văn phòng Đoàn -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#0f766e;"><i class="fa fa-map-marker-alt"></i>
+                          Liên hệ Đoàn trường</div>
+                        <div style="padding:12px 14px; font-size:12px; line-height:1.7; color:#475569;">
+                          <strong>Văn phòng Đoàn trường THPT Nghi Lộc 3</strong><br>
+                          Địa chỉ: Xã Nghi Xuân, Huyện Nghi Lộc, Tỉnh Nghệ An<br>
+                          Email: <span style="color:#005aab;">c3nghiloc3@nghean.edu.vn</span><br>
+                          Fanpage: facebook.com/c3nghiloc3
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End #page-content -->
+  </div><!-- End #whole-page -->
+
+  <!-- Footer -->
+  <div class="region-bottom" style="margin-top: 30px;">
+    <div id="module6" class="ModuleWrapper">
+      <div class="layout-footer-color" style="background:#fff; border-top:3px solid #005aab; padding:20px 0;">
+        <div class="container">
+          <div class="row two-col-left">
+            <div class="col-md-2 col-sidebar" style="text-align:center;">
+              <img alt="Logo THPT Nghi Lộc 3" width="90" height="90" src="upload/33152/fck/files/logoNL3_2(1).png" />
+            </div>
+            <div class="col-md-10 col-main" style="font-size:13px; line-height:1.7; color:#555;">
+              <p style="margin:0 0 4px 0;"><span style="font-size:15px; color:#005aab;"><strong>TRƯỜNG THPT NGHI LỘC
+                    3</strong></span></p>
+              <p style="margin:0 0 4px 0;">Địa chỉ: Xã Nghi Xuân, Huyện Nghi Lộc, Tỉnh Nghệ An</p>
+              <p style="margin:0 0 4px 0;">Điện thoại: 02383.860.979 - 02383.860.123 - Email: c3nghiloc3@nghean.edu.vn
+              </p>
+              <p style="margin:0; color:#888;">Ghi rõ nguồn thptnghiloc3.edu.vn khi trích dẫn thông tin từ website này.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="3rdparty/jQuery/jqueryui/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var monthNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+      var dayNames = ["Chủ Nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];
+      var newDate = new Date();
+      $('#Date').html(dayNames[newDate.getDay()] + ", " + newDate.getDate() + '/' + monthNames[newDate.getMonth()] + '/' + newDate.getFullYear());
+      setInterval(function () { var s = new Date().getSeconds(); $("#sec").html((s < 10 ? "0" : "") + s); }, 1000);
+      setInterval(function () { var m = new Date().getMinutes(); $("#min").html((m < 10 ? "0" : "") + m); }, 1000);
+      setInterval(function () { var h = new Date().getHours(); $("#hours").html(h); }, 1000);
+    });
+  </script>
+</body>
+
+</html>
