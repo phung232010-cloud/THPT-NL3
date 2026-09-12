@@ -2367,31 +2367,31 @@
       stored.unshift(formData);
       localStorage.setItem('CLB_REGISTRATIONS_DATA', JSON.stringify(stored));
 
-      // 2. Gửi vào Google Drive (Google Sheet qua Apps Script Web App nếu có)
-      var scriptUrl = GOOGLE_DRIVE_WEBHOOK_URL;
-      var postPromise = Promise.resolve();
-
-      if (scriptUrl) {
-        postPromise = fetch(scriptUrl, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        }).catch(function(err) {
-          console.warn('Google Script Webhook notice:', err);
-        });
+      // 2. Gửi ngầm vào Google Drive (không bắt người dùng chờ mạng lag)
+      if (GOOGLE_DRIVE_WEBHOOK_URL) {
+        try {
+          fetch(GOOGLE_DRIVE_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(formData)
+          }).catch(function(err) {
+            console.warn('Google Script Webhook notice:', err);
+          });
+        } catch (err) {
+          console.warn('Send error:', err);
+        }
       }
 
-      // Giả lập xử lý nhanh 400ms để người dùng thấy phản hồi mượt mà
+      // 3. Phản hồi giao diện siêu tốc chỉ sau 400ms
       setTimeout(function () {
-        postPromise.then(function () {
-          btnSubmit.disabled = false;
-          btnSubmit.innerHTML = originalBtnHtml;
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalBtnHtml;
 
-          // Hiển thị màn hình thành công
-          showSuccessScreen(formData);
-          document.getElementById('clbApplicationForm').reset();
-        });
+        // Hiển thị màn hình thành công tức thì
+        showSuccessScreen(formData);
+        document.getElementById('clbApplicationForm').reset();
       }, 400);
     }
 
