@@ -1976,7 +1976,7 @@
           <input type="hidden" id="formClbId" name="clb_id" value="">
 
           <!-- Phần 1: Thông tin cá nhân -->
-          <div class="clb-form-section-title"><i class="fa fa-user"></i> 1. Thông tin học sinh</div>
+          <div class="clb-form-section-title"><i class="fa fa-user"></i> 1. Thông tin học sinh (Bắt buộc Họ tên, Lớp, SĐT, Gmail)</div>
           
           <div class="clb-form-grid-2">
             <div class="clb-form-group">
@@ -1994,13 +1994,19 @@
             <div class="clb-form-group">
               <label class="clb-form-label" for="applicantPhone">Số điện thoại / Zalo <span class="required">*</span></label>
               <input type="tel" id="applicantPhone" name="applicant_phone" class="clb-form-input" placeholder="Ví dụ: 0912 345 678" pattern="[0-9]{9,11}" title="Vui lòng nhập 10 chữ số điện thoại" required>
-              <div class="clb-form-help">Dùng để BCH CLB tạo nhóm Zalo và gửi thông báo lịch sinh hoạt.</div>
+              <div class="clb-form-help">Dùng để BCH CLB tạo nhóm Zalo và gửi lịch sinh hoạt.</div>
             </div>
 
             <div class="clb-form-group">
-              <label class="clb-form-label" for="applicantHobby">Sở thích cá nhân</label>
-              <input type="text" id="applicantHobby" name="applicant_hobby" class="clb-form-input" placeholder="Ví dụ: Chụp ảnh, đàn guitar, đọc sách, thể thao...">
+              <label class="clb-form-label" for="applicantEmail">Gmail / Email liên hệ <span class="required">*</span></label>
+              <input type="email" id="applicantEmail" name="applicant_email" class="clb-form-input" placeholder="Ví dụ: nguyenvanan@gmail.com" required>
+              <div class="clb-form-help">Dùng để nhận thư mời phỏng vấn và thông báo kết quả.</div>
             </div>
+          </div>
+
+          <div class="clb-form-group">
+            <label class="clb-form-label" for="applicantHobby">Sở thích cá nhân</label>
+            <input type="text" id="applicantHobby" name="applicant_hobby" class="clb-form-input" placeholder="Ví dụ: Chụp ảnh, đàn guitar, đọc sách, thể thao...">
           </div>
 
           <!-- Phần 2: Năng lực và thuyết trình sở trường -->
@@ -2350,6 +2356,7 @@
         fullName: document.getElementById('applicantName').value.trim(),
         className: document.getElementById('applicantClass').value.trim(),
         phoneNumber: document.getElementById('applicantPhone').value.trim(),
+        email: document.getElementById('applicantEmail').value.trim(),
         hobby: document.getElementById('applicantHobby').value.trim() || 'Chưa điền',
         skills: document.getElementById('applicantSkills').value.trim() || 'Chưa điền',
         essay: document.getElementById('applicantEssay').value.trim()
@@ -2398,6 +2405,7 @@
         '<strong>Câu lạc bộ:</strong> ' + data.clbName + '<br>' +
         '<strong>Họ tên:</strong> ' + data.fullName + ' — <strong>Lớp:</strong> ' + data.className + '<br>' +
         '<strong>Số điện thoại / Zalo:</strong> ' + data.phoneNumber + '<br>' +
+        '<strong>Gmail liên hệ:</strong> ' + (data.email || 'Chưa điền') + '<br>' +
         '<strong>Thời gian nộp:</strong> ' + data.timestamp + '<br>' +
         '<div style="margin-top:8px; color:#16a34a; font-weight:600;"><i class="fa fa-check-circle"></i> Đơn đăng ký đã được gửi thành công và lưu trữ an toàn vào Google Drive của trường!</div>';
 
@@ -2472,7 +2480,7 @@
         alert('Chưa có dữ liệu đơn đăng ký để xuất.');
         return;
       }
-      var csv = '\uFEFF"Thoi gian","Ho va ten","Lop","So dien thoai","Cau lac bo","So thich","Nang luc","Bai thuyet trinh so truong"\n';
+      var csv = '\uFEFF"Thoi gian","Ho va ten","Lop","So dien thoai","Gmail","Cau lac bo","So thich","Nang luc","Bai thuyet trinh so truong"\n';
       stored.forEach(function(r) {
         csv += '"' + (r.timestamp || '') + '",' +
                '"' + (r.fullName || '') + '",' +
