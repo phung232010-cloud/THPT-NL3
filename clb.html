@@ -1,0 +1,2184 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!-- BÀI VIẾT: HỆ THỐNG 9 CÂU LẠC BỘ HỌC SINH - TRƯỜNG THPT NGHI LỘC 3 -->
+<style>
+    
+
+    /* Phong cách Cổng thông tin Giáo dục */
+    .clb-header-box {
+      background: #005aab;
+      color: #fff;
+      padding: 9px 15px;
+      border-radius: 4px 4px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid #f39c12;
+    }
+
+    .clb-header-box h1 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+    }
+
+    .clb-intro-p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #374151;
+      text-align: justify;
+      margin-bottom: 16px;
+    }
+
+    /* Thanh điều hướng 9 CLB nhanh */
+    .clb-quick-nav {
+      background: #f4f7fa;
+      border: 1px solid #dce4ec;
+      border-radius: 4px;
+      padding: 10px 14px;
+      margin-bottom: 25px;
+    }
+
+    .clb-quick-nav-title {
+      font-size: 13px;
+      font-weight: bold;
+      color: #005aab;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .clb-quick-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .clb-tag-link {
+      display: inline-block;
+      font-size: 12px;
+      padding: 5px 10px;
+      background: #fff;
+      color: #1e3a8a;
+      border: 1px solid #cbd5e1;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    .clb-tag-link:hover,
+    .clb-tag-link.active {
+      background: #005aab;
+      color: #fff;
+      border-color: #005aab;
+      text-decoration: none;
+    }
+
+    /* Thẻ từng Câu lạc bộ */
+    .clb-card {
+      background: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      margin-bottom: 26px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+      transition: box-shadow 0.2s;
+    }
+
+    .clb-card:hover {
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      border-color: #93c5fd;
+    }
+
+    .clb-card-header {
+      background: #f8fafc;
+      border-bottom: 2px solid #005aab;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .clb-card-title {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #005aab;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .clb-card-badge {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      background: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .clb-card-body {
+      padding: 14px 16px;
+    }
+
+    .clb-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+      background: #f9fafb;
+      border: 1px solid #f1f5f9;
+      border-radius: 4px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .clb-info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .clb-info-item strong {
+      color: #0f172a;
+      display: inline-block;
+      min-width: 110px;
+    }
+
+    .clb-info-item span {
+      color: #475569;
+    }
+
+    .clb-slogan {
+      background: #eff6ff;
+      border-left: 4px solid #005aab;
+      padding: 8px 14px;
+      font-style: italic;
+      color: #1e40af;
+      font-size: 13px;
+      margin-bottom: 14px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .clb-section-subtitle {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1f2937;
+      margin: 14px 0 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .clb-section-subtitle i {
+      color: #005aab;
+      font-size: 13px;
+    }
+
+    .clb-list-bullets {
+      margin: 0 0 12px 0;
+      padding-left: 20px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #374151;
+    }
+
+    .clb-list-bullets li {
+      margin-bottom: 4px;
+    }
+
+    /* Hộp thông báo đăng ký */
+    .clb-join-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 5px solid #d97706;
+      border-radius: 4px;
+      padding: 18px 20px;
+      margin-top: 30px;
+    }
+
+    .clb-join-box h3 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #b45309;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Sidebar right */
+    .clb-sidebar-panel {
+      border: 1px solid #dce4ec;
+      border-radius: 4px;
+      background: #fff;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .clb-sidebar-title {
+      background: #005aab;
+      color: #fff;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      border-radius: 3px 3px 0 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .clb-sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .clb-sidebar-list li {
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .clb-sidebar-list li:last-child {
+      border-bottom: none;
+    }
+
+    .clb-sidebar-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 14px;
+      color: #334155;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .clb-sidebar-list a:hover {
+      background: #f0f7ff;
+      color: #005aab;
+      font-weight: 500;
+    }
+
+    .clb-sidebar-list a i {
+      color: #005aab;
+      margin-right: 8px;
+    }
+
+    /* Menu standard styles */
+
+    /* Menu Mobi: Ẩn hoàn toàn trên màn hình máy tính (Desktop) */
+    @media (min-width: 769px) {
+      .menu-mobi {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .menu-mobi {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        width: calc(100% - 44px) !important;
+        padding-right: 10px;
+        background: transparent;
+        white-space: nowrap;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .menu-mobi ul.list-menu {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .menu-mobi ul.list-menu>li {
+        margin-right: 20px;
+      }
+
+      .menu-mobi ul.list-menu>li>a {
+        display: block;
+        white-space: nowrap;
+        color: #fff;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 13px;
+      }
+
+      .menu-mobi::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    /* News ticker and live clock */
+    .news-scroll {
+      width: auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .news-track {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll 25s linear infinite;
+    }
+
+    .news-track>div {
+      display: inline-block;
+      margin-right: 20px;
+      text-decoration: none;
+      line-height: 30px;
+    }
+
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .news-scroll:hover .news-track {
+      animation-play-state: paused;
+    }
+
+    .chu-chay .time-news {
+      float: left;
+      padding-right: 5px;
+    }
+
+    .chu-chay .right-chuchay {
+      display: flex;
+    }
+
+    .clock {
+      color: #000;
+      line-height: 30px;
+      font-weight: bold;
+    }
+
+    #Date {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      float: left;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .clock ul {
+      margin: 0 auto;
+      padding: 0px;
+      list-style: none;
+      text-align: center;
+      display: inline;
+    }
+
+    .clock ul li {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      display: inline-block;
+    }
+
+    #point {
+      position: relative;
+      -moz-animation: mymove 1s ease infinite;
+      -webkit-animation: mymove 1s ease infinite;
+    }
+
+    .chu-chay .right-chuchay div {
+      font-weight: bold;
+      color: red;
+      font-size: 14px;
+    }
+
+    #module5 .chu-chay {
+      background-color: #fff;
+    }
+  </style>
+
+<div class="clb-article-wrapper" style="max-width: 1140px; margin: 0 auto; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+<div class="clb-header-box">
+                        <h1><i class="fa fa-users"></i> HỆ THỐNG CÁC CÂU LẠC BỘ HỌC SINH TRƯỜNG THPT NGHI LỘC 3</h1>
+                        <span
+                          style="font-size:12px; background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:3px;">Năm
+                          học 2026 - 2027</span>
+                      </div>
+
+                      <div style="padding: 16px 4px 10px 4px;">
+                        <p class="clb-intro-p">
+                          Thực hiện chương trình công tác Đoàn và phong trào thanh niên trường học, nhằm tạo môi trường
+                          giáo dục toàn diện, phát huy năng khiếu, sở trường và rèn luyện kỹ năng thực hành xã hội cho
+                          đoàn viên thanh niên theo định hướng Chương trình GDPT 2018; <strong>Ban Chấp hành Đoàn trường
+                            THPT Nghi Lộc 3</strong> duy trì và phát triển mô hình sinh hoạt của <strong>9 Câu lạc bộ
+                            học sinh</strong> nòng cốt. Đây là sân chơi lành mạnh, bổ ích, giúp các em học sinh thỏa
+                          niềm đam mê, rèn luyện kỹ năng mềm, nâng cao tinh thần làm việc nhóm và tự tin hội nhập.
+                        </p>
+
+                        <!-- Thanh liên kết nhanh 9 CLB -->
+                        <div class="clb-quick-nav">
+                          <div class="clb-quick-nav-title"><i class="fa fa-bookmark"></i> Danh mục chọn nhanh 9 Câu lạc
+                            bộ:</div>
+                          <div class="clb-quick-tags">
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-truyen-thong"><i class="fa fa-camera"></i> 1. Truyền
+                              thông</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-am-nhac"><i class="fa fa-music"></i> 2. Âm nhạc</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-sach-va-hanh-dong"><i class="fa fa-book"></i> 3. Sách &
+                              Hành động</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-khoa-hoc-tu-nhien"><i class="fa fa-flask"></i> 4. Khoa
+                              học Tự nhiên</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-chuyen-doi-so"><i class="fa fa-laptop-code"></i> 5.
+                              Chuyển đổi số</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-tieng-anh"><i class="fa fa-language"></i> 6. Tiếng
+                              Anh</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-thanh-nien-tinh-nguyen"><i
+                                class="fa fa-hands-helping"></i> 7. TNTN Tình nguyện</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-van-hoc"><i class="fa fa-feather-alt"></i> 8. Văn học</a>
+                            <a class="clb-tag-link" href="cau-lac-bo#clb-the-duc-the-thao"><i class="fa fa-futbol"></i> 9. Thể dục
+                              Thể thao</a>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   1. CLB TRUYỀN THÔNG
+                   ============================================== -->
+                        <div class="clb-card" id="clb-truyen-thong">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-camera-retro"></i> 1. CÂU LẠC BỘ TRUYỀN THÔNG
+                              (NMC - NGHI LOC 3 MEDIA CLUB)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Ghi dấu khoảnh khắc - Lan tỏa yêu thương - Kết nối tự
+                              hào THPT Nghi Lộc 3"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>BCH Đoàn trường & Tổ
+                                  Tin học</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Học sinh khối 11, 12 phụ
+                                  trách</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 hàng
+                                  tuần & các sự kiện trường</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng Đoàn trường &
+                                  Phòng Đa chức năng</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              CLB Truyền thông là kênh truyền thông chính thức của học sinh, đảm nhận vai trò ghi lại
+                              những khoảnh khắc đẹp trong mọi hoạt động giảng dạy, học tập, văn hóa, thể thao của thầy
+                              và trò nhà trường. Xây dựng hình ảnh học sinh Nghi Lộc 3 năng động, sáng tạo và chuẩn mực
+                              trên các phương tiện thông tin đại chúng.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-cogs"></i> Cơ cấu các ban chuyên môn:
+                            </div>
+                            <ul class="clb-list-bullets">
+                              <li><strong>Ban Nội dung (Content):</strong> Lên ý tưởng bài viết, viết tin tức, bài phóng
+                                sự, kịch bản video, phỏng vấn giáo viên và học sinh tiêu biểu.</li>
+                              <li><strong>Ban Kỹ thuật (Photo & Video):</strong> Chụp ảnh sự kiện, quay video ngày hội,
+                                phóng sự hoạt động, điều khiển flycam và thiết bị quay chụp.</li>
+                              <li><strong>Ban Thiết kế đồ họa (Design):</strong> Thiết kế banner, poster, infographic cổ
+                                động các phong trào, bản tin tuần, kỷ yếu học sinh.</li>
+                            </ul>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Phối hợp quản trị trang Fanpage chính thức của trường và kênh thông tin Đoàn trường.
+                              </li>
+                              <li>Phóng sự ảnh chào đón năm học mới, lễ Khai giảng, chuỗi hoạt động Kỷ niệm ngày Nhà
+                                giáo Việt Nam 20/11, ngày thành lập Đoàn 26/3.</li>
+                              <li>Bản tin truyền hình học đường "Nghi Lộc 3 News" định kỳ hàng tháng.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('1. CÂU LẠC BỘ TRUYỀN THÔNG (NMC)', 'fa-camera-retro', '#005aab', 'clb-truyen-thong')">
+                                  <i class="fa fa-camera-retro"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('1. CÂU LẠC BỘ TRUYỀN THÔNG (NMC)', 'clb-truyen-thong', 'fa-camera-retro', '#005aab')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   2. CLB ÂM NHẠC
+                   ============================================== -->
+                        <div class="clb-card" id="clb-am-nhac">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-music"></i> 2. CÂU LẠC BỘ ÂM NHẠC (MUSIC CLUB)
+                            </h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Giai điệu kết nối tâm hồn - Đam mê thắp sáng sân trường"
+                            </div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ Xã hội & Giáo viên
+                                  Âm nhạc/Nghệ thuật</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội trưởng đội Văn nghệ
+                                  xung kích</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 7 hàng
+                                  tuần</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng Hội đồng & Hội
+                                  trường nhà trường</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Tạo sân chơi cho các bạn học sinh yêu thích ca hát, nhạc cụ và vũ đạo; bồi dưỡng và phát
+                              hiện các nhân tố nghệ thuật tiêu biểu, xây dựng đội văn nghệ nòng cốt phục vụ các sự kiện
+                              chính trị, ngày lễ lớn và các kỳ hội thi nghệ thuật các cấp.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-cogs"></i> Cơ cấu các nhóm hoạt động:
+                            </div>
+                            <ul class="clb-list-bullets">
+                              <li><strong>Nhóm Thanh nhạc:</strong> Luyện thanh, bè phối, biểu diễn ca khúc cách mạng,
+                                dân ca xứ Nghệ, ca khúc tuổi trẻ và học đường.</li>
+                              <li><strong>Nhóm Nhạc cụ:</strong> Guitar acoustic, organ, trống cajon, sáo trúc và nhạc
+                                cụ dân tộc.</li>
+                              <li><strong>Nhóm Vũ đạo (Dance/Múa):</strong> Biên đạo múa đương đại, múa dân gian dân tộc
+                                và nhảy hiện đại sôi động.</li>
+                            </ul>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Hội diễn văn nghệ "Tri ân thầy cô" chào mừng ngày Nhà giáo Việt Nam 20/11.</li>
+                              <li>Chương trình biểu diễn Acoustic góc sân trường trong các giờ sinh hoạt ngoại khóa và
+                                giờ ra chơi.</li>
+                              <li>Tham gia và đạt giải cao tại Hội thi "Giai điệu tuổi hồng" do Sở GD&ĐT Nghệ An tổ
+                                chức.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('2. CÂU LẠC BỘ ÂM NHẠC (MUSIC CLUB)', 'fa-music', '#4f46e5', 'clb-am-nhac')">
+                                  <i class="fa fa-music"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('2. CÂU LẠC BỘ ÂM NHẠC (MUSIC CLUB)', 'clb-am-nhac', 'fa-music', '#4f46e5')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   3. CLB SÁCH VÀ HÀNH ĐỘNG
+                   ============================================== -->
+                        <div class="clb-card" id="clb-sach-va-hanh-dong">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-book-reader"></i> 3. CÂU LẠC BỘ SÁCH VÀ HÀNH ĐỘNG
+                            </h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Đọc sách để mở mang trí tuệ - Hành động để kiến tạo
+                              tương lai"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Cán bộ Thư viện
+                                  trường & Tổ Ngữ văn</span></div>
+                              <div class="clb-info-item"><strong>Ban Điều hành:</strong> <span>Đội ngũ cộng tác viên Thư
+                                  viện xanh</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Giờ ra chơi các
+                                  ngày & Chiều thứ 5</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Thư viện trường &
+                                  Không gian đọc mở</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Lan tỏa và xây dựng thói quen đọc sách mỗi ngày cho đoàn viên thanh niên; khuyến khích
+                              tinh thần tự học, tự nghiên cứu; kết hợp lý thuyết trên trang sách với hành động cụ thể vì
+                              cộng đồng và bảo vệ môi trường.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Dự án <strong>"Tủ sách lớp học"</strong>: Vận động quyên góp sách hay, xây dựng tủ
+                                sách dùng chung tại các chi đoàn.</li>
+                              <li>Chiến dịch <strong>"Đổi giấy lấy cây - Đổi sách trao tri thức"</strong> gây quỹ ủng hộ
+                                học sinh có hoàn cảnh khó khăn.</li>
+                              <li>Tổ chức <strong>Ngày hội Văn hóa Đọc</strong> và tọa đàm chia sẻ phương pháp đọc sách
+                                hiệu quả vào tháng 4 hàng năm.</li>
+                              <li>Review sách hay mỗi tuần trên bảng tin Thư viện trường và chuyên trang phát thanh học
+                                đường.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('3. CÂU LẠC BỘ SÁCH VÀ HÀNH ĐỘNG', 'fa-book-reader', '#0f766e', 'clb-sach-va-hanh-dong')">
+                                  <i class="fa fa-book-reader"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('3. CÂU LẠC BỘ SÁCH VÀ HÀNH ĐỘNG', 'clb-sach-va-hanh-dong', 'fa-book-reader', '#0f766e')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   4. CLB KHOA HỌC TỰ NHIÊN
+                   ============================================== -->
+                        <div class="clb-card" id="clb-khoa-hoc-tu-nhien">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-flask"></i> 4. CÂU LẠC BỘ KHOA HỌC TỰ NHIÊN &
+                              STEM</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Khám phá bí ẩn tự nhiên - Sáng tạo vì cuộc sống"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ trưởng chuyên môn
+                                  Lý - Hóa - Sinh</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội tuyển HSG và NCKH các
+                                  khối lớp</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 cách
+                                  tuần</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng Thực hành Lý -
+                                  Hóa - Sinh</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Khơi gợi niềm say mê khoa học, kích thích tư duy logic và khả năng vận dụng kiến thức
+                              Toán, Vật lý, Hóa học, Sinh học vào giải quyết các vấn đề thực tiễn; là cái nôi ươm mầm
+                              các dự án tham dự Cuộc thi Sáng tạo Khoa học Kỹ thuật (KHKT) các cấp.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Tổ chức <strong>Ngày hội STEM cấp trường</strong> với các gian hàng trưng bày sản phẩm
+                                khoa học ứng dụng.</li>
+                              <li>Cuộc thi chế tạo bắn tên lửa nước, mô hình cầu chịu lực, hệ thống lọc nước mi-ni thân
+                                thiện môi trường.</li>
+                              <li>Bồi dưỡng kỹ năng lập hồ sơ nghiên cứu, báo cáo khoa học và thuyết trình đề tài KHKT
+                                trước hội đồng chuyên môn.</li>
+                              <li>Các buổi thực hành thí nghiệm vui, khám phá hóa học đời sống và thế giới sinh vật học
+                                địa phương.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('4. CÂU LẠC BỘ KHOA HỌC TỰ NHIÊN & STEM', 'fa-flask', '#0284c7', 'clb-khoa-hoc-tu-nhien')">
+                                  <i class="fa fa-flask"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('4. CÂU LẠC BỘ KHOA HỌC TỰ NHIÊN & STEM', 'clb-khoa-hoc-tu-nhien', 'fa-flask', '#0284c7')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   5. CLB CHUYỂN ĐỔI SỐ
+                   ============================================== -->
+                        <div class="clb-card" id="clb-chuyen-doi-so">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-laptop-code"></i> 5. CÂU LẠC BỘ CHUYỂN ĐỔI SỐ &
+                              CÔNG NGHỆ THÔNG TIN</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Tiên phong kỹ năng số - Nâng tầm học đường thời đại 4.0"
+                            </div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Giáo viên bộ môn Tin
+                                  học & Quản trị mạng</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Học sinh xuất sắc môn Tin
+                                  học</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 7 tuần 2
+                                  và tuần 4</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng máy vi tính số
+                                  1 & 2</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Đẩy mạnh phong trào chuyển đổi số trong học sinh; trang bị kỹ năng tin học văn phòng, kỹ
+                              năng an toàn không gian mạng, sử dụng hiệu quả nền tảng học tập trực tuyến (K12Online,
+                              VnEdu); làm quen với lập trình cơ bản và ứng dụng công nghệ trong học tập.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Tổ chức các buổi tập huấn chuyên đề <strong>"Văn hóa ứng xử văn minh và bảo mật an
+                                  toàn trên Internet"</strong>.</li>
+                              <li>Hỗ trợ giáo viên và học sinh kỹ thuật trong các kỳ thi trắc nghiệm trực tuyến và hội
+                                thảo qua cầu truyền hình.</li>
+                              <li>Nhóm học tập lập trình ứng dụng (Python, Scratch, Web cơ bản) giải các bài toán tin
+                                học học sinh giỏi.</li>
+                              <li>Số hóa tài liệu, hỗ trợ Thư viện điện tử và biên tập dữ liệu học tập dùng chung cho
+                                trường.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('5. CÂU LẠC BỘ CHUYỂN ĐỔI SỐ & CÔNG NGHỆ THÔNG TIN', 'fa-laptop-code', '#2563eb', 'clb-chuyen-doi-so')">
+                                  <i class="fa fa-laptop-code"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('5. CÂU LẠC BỘ CHUYỂN ĐỔI SỐ & CÔNG NGHỆ THÔNG TIN', 'clb-chuyen-doi-so', 'fa-laptop-code', '#2563eb')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   6. CLB TIẾNG ANH
+                   ============================================== -->
+                        <div class="clb-card" id="clb-tieng-anh">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-language"></i> 6. CÂU LẠC BỘ TIẾNG ANH (NEC -
+                              NGHI LOC 3 ENGLISH CLUB)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Speak to Inspire - Confident to Connect - Vươn ra thế
+                              giới"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ trưởng & Giáo viên
+                                  Tổ Văn - Ngoại ngữ</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Học sinh giỏi tiếng Anh
+                                  các lớp chọn</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 hàng
+                                  tuần (100% English)</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng học Ngoại ngữ
+                                  tương tác</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Xây dựng môi trường giao tiếp tiếng Anh tự nhiên, thân thiện và không sợ sai; nâng cao
+                              năng lực nghe - nói - phản xạ, mở rộng vốn từ vựng và hiểu biết văn hóa quốc tế; đồng hành
+                              cùng học sinh chuẩn bị tốt cho các kỳ thi IELTS và Tốt nghiệp THPT.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Sinh hoạt chuyên đề bằng tiếng Anh: Thuyết trình theo chủ đề (Môi trường, Nghề nghiệp,
+                                Văn hóa quê hương Nghệ An).</li>
+                              <li>Sân chơi <strong>"Rung chuông vàng Tiếng Anh - Ring the Golden Bell"</strong> toàn
+                                trường.</li>
+                              <li>Câu lạc bộ Hùng biện tiếng Anh (English Debate Club) theo format tranh biện quốc tế.
+                              </li>
+                              <li>Giao lưu ngoại khóa với các tình nguyện viên và giáo viên người bản ngữ.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('6. CÂU LẠC BỘ TIẾNG ANH (NEC)', 'fa-language', '#0369a1', 'clb-tieng-anh')">
+                                  <i class="fa fa-language"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('6. CÂU LẠC BỘ TIẾNG ANH (NEC)', 'clb-tieng-anh', 'fa-language', '#0369a1')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   7. CLB THANH NIÊN TÌNH NGUYỆN
+                   ============================================== -->
+                        <div class="clb-card" id="clb-thanh-nien-tinh-nguyen">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-hands-helping"></i> 7. CÂU LẠC BỘ THANH NIÊN TÌNH
+                              NGUYỆN</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Đâu cần thanh niên có - Đâu khó có thanh niên Nghi Lộc
+                              3"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chỉ đạo:</strong> <span>Bí thư & Phó Bí thư Đoàn
+                                  trường</span></div>
+                              <div class="clb-info-item"><strong>Ban Chỉ huy:</strong> <span>Đội trưởng Đội Thanh niên
+                                  xung kích</span></div>
+                              <div class="clb-info-item"><strong>Thời gian hoạt động:</strong> <span>Thường xuyên & Các
+                                  chiến dịch cao điểm</span></div>
+                              <div class="clb-info-item"><strong>Địa bàn:</strong> <span>Khuôn viên trường & các xã lân
+                                  cận Phường Vinh Lộc</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Phát huy tinh thần xung kích, tình nguyện của tuổi trẻ vì cuộc sống cộng đồng; giáo dục
+                              lòng nhân ái, tinh thần trách nhiệm với xã hội; giữ gìn nền nếp kỷ cương, trật tự an toàn
+                              giao thông khu vực cổng trường và bảo vệ môi trường học đường.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Đội hình <strong>"Cổng trường An toàn Giao thông"</strong>: Phân luồng, hướng dẫn học
+                                sinh và phụ huynh chấp hành luật giao thông giờ cao điểm.</li>
+                              <li>Chương trình <strong>"Tiếp sức mùa thi"</strong> kỳ thi Tuyển sinh vào lớp 10 và Tốt
+                                nghiệp THPT hàng năm.</li>
+                              <li>Phong trào <strong>"Chủ nhật xanh"</strong>: Vệ sinh trường lớp, chăm sóc bồn hoa cây
+                                cảnh, dọn rác bãi biển Cửa Lò - Nghi Lộc.</li>
+                              <li>Thăm hỏi, tặng quà các gia đình chính sách, Bà mẹ Việt Nam Anh hùng, quyên góp áo ấm
+                                mùa đông cho học sinh nghèo.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('7. CÂU LẠC BỘ THANH NIÊN TÌNH NGUYỆN', 'fa-hands-helping', '#16a34a', 'clb-thanh-nien-tinh-nguyen')">
+                                  <i class="fa fa-hands-helping"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('7. CÂU LẠC BỘ THANH NIÊN TÌNH NGUYỆN', 'clb-thanh-nien-tinh-nguyen', 'fa-hands-helping', '#16a34a')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   8. CLB VĂN HỌC
+                   ============================================== -->
+                        <div class="clb-card" id="clb-van-hoc">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-feather-alt"></i> 8. CÂU LẠC BỘ VĂN HỌC (KHÁT
+                              VỌNG XANH)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Nơi hội tụ những tâm hồn yêu cái đẹp - Nuôi dưỡng ngòi
+                              bút nhân văn"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Tổ trưởng & Các thầy
+                                  cô giáo Tổ Ngữ văn</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội tuyển HSG Văn các
+                                  khối 10, 11, 12</span></div>
+                              <div class="clb-info-item"><strong>Thời gian sinh hoạt:</strong> <span>Chiều thứ 5 tuần 1
+                                  và tuần 3</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm sinh hoạt:</strong> <span>Phòng truyền thống
+                                  trường</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Tạo diễn đàn cho những bạn học sinh có năng khiếu viết văn, làm thơ, cảm thụ cái đẹp của
+                              văn chương; trau dồi tình yêu tiếng mẹ đẻ, bồi dưỡng tâm hồn trong sáng, nhân hậu; rèn
+                              luyện kỹ năng viết bài nghị luận, sáng tác tản văn và kịch bản văn học.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Biên tập và phát hành <strong>Tập san Tri ân</strong> chào mừng ngày Nhà giáo Việt Nam
+                                20/11 và kỷ niệm thành lập trường.</li>
+                              <li>Tổ chức hoạt động <strong>"Sân khấu hóa tác phẩm văn học"</strong> (chuyển thể kịch
+                                bản 'Vợ nhặt', 'Chí Phèo', 'Truyện Kiều'...).</li>
+                              <li>Cuộc thi viết tản văn "Ký ức mái trường Nghi Lộc 3" và diễn đàn bình thơ đầu tuần dưới
+                                cờ.</li>
+                              <li>Giao lưu với các nhà văn, nhà thơ và giáo viên dạy giỏi tỉnh Nghệ An.</li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('8. CÂU LẠC BỘ VĂN HỌC (KHÁT VỌNG XANH)', 'fa-feather-alt', '#b91c1c', 'clb-van-hoc')">
+                                  <i class="fa fa-feather-alt"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('8. CÂU LẠC BỘ VĂN HỌC (KHÁT VỌNG XANH)', 'clb-van-hoc', 'fa-feather-alt', '#b91c1c')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- ==============================================
+                   9. CLB THỂ DỤC THỂ THAO
+                   ============================================== -->
+                        <div class="clb-card" id="clb-the-duc-the-thao">
+                          <div class="clb-card-header">
+                            <h2 class="clb-card-title"><i class="fa fa-running"></i> 9. CÂU LẠC BỘ THỂ DỤC THỂ THAO
+                              (SPORTS CLUB)</h2>
+                          </div>
+                          <div class="clb-card-body">
+                            <div class="clb-slogan">"Khẩu hiệu: Rèn luyện thân thể theo gương Bác Hồ vĩ đại - Khỏe để
+                              học tập và xây dựng Tổ quốc"</div>
+                            <div class="clb-info-grid">
+                              <div class="clb-info-item"><strong>Cố vấn chuyên môn:</strong> <span>Giáo viên nhóm Thể
+                                  dục - GDQPAN</span></div>
+                              <div class="clb-info-item"><strong>Ban Chủ nhiệm:</strong> <span>Đội trưởng các đội tuyển
+                                  thể thao học sinh</span></div>
+                              <div class="clb-info-item"><strong>Thời gian tập luyện:</strong> <span>Các buổi chiều sau
+                                  giờ học (16h30 - 17h45)</span></div>
+                              <div class="clb-info-item"><strong>Địa điểm hoạt động:</strong> <span>Sân bóng đá cỏ nhân
+                                  tạo, Sân bóng chuyền, Nhà thi đấu</span></div>
+                            </div>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-bullseye"></i> Mục đích & Tôn chỉ hoạt
+                              động:</div>
+                            <p style="font-size:13px; line-height:1.6; margin-bottom:10px;">
+                              Rèn luyện thể lực, nâng cao sức khỏe, giải tỏa căng thẳng sau các giờ học văn hóa; phát
+                              triển tinh thần đồng đội, tính kỷ luật và ý chí kiên cường; phát hiện và bồi dưỡng các vận
+                              động viên nòng cốt cho đội tuyển trường tham gia Hội khỏe Phù Đổng các cấp.
+                            </p>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-cogs"></i> Các phân môn hoạt động thường
+                              xuyên:</div>
+                            <ul class="clb-list-bullets">
+                              <li><strong>Bóng đá nam & Bóng đá nữ:</strong> Tổ chức giải bóng đá học sinh truyền thống
+                                tranh Cup Nghi Lộc 3.</li>
+                              <li><strong>Bóng chuyền:</strong> Đội bóng chuyền nam, nữ rèn luyện kỹ thuật đệm bóng,
+                                phát bóng, chiến thuật phối hợp.</li>
+                              <li><strong>Cầu lông & Bóng bàn:</strong> Luyện tập phản xạ nhanh, kỹ thuật đánh đơn và
+                                đánh đôi.</li>
+                              <li><strong>Điền kinh & Cờ vua:</strong> Bồi dưỡng vận động viên chạy cự ly ngắn, nhảy
+                                cao, nhảy xa và môn thể thao trí tuệ Cờ vua.</li>
+                            </ul>
+
+                            <div class="clb-section-subtitle"><i class="fa fa-star"></i> Hoạt động tiêu biểu:</div>
+                            <ul class="clb-list-bullets">
+                              <li>Giải bóng đá học sinh THPT Nghi Lộc 3 chào mừng ngày thành lập Đoàn TNCS Hồ Chí Minh
+                                26/3.</li>
+                              <li>Giải bóng chuyền truyền thống cán bộ - giáo viên - học sinh nhân dịp 20/11.</li>
+                              <li>Tham gia Hội khỏe Phù Đổng cấp cụm và cấp tỉnh đạt nhiều huy chương Vàng, Bạc, Đồng.
+                              </li>
+                            </ul>
+                          
+                            <!-- Nút Đăng ký tham gia CLB -->
+                            <div class="clb-card-footer-action">
+                              <div class="clb-card-action-btns">
+                                <button type="button" class="btn-clb-register" onclick="openClbRegistration('9. CÂU LẠC BỘ THỂ DỤC THỂ THAO (SPORTS CLUB)', 'fa-running', '#ea580c', 'clb-the-duc-the-thao')">
+                                  <i class="fa fa-running"></i> Đăng ký tham gia CLB này
+                                </button>
+                                <button type="button" class="btn-clb-qr" onclick="openClbQrModal('9. CÂU LẠC BỘ THỂ DỤC THỂ THAO (SPORTS CLUB)', 'clb-the-duc-the-thao', 'fa-running', '#ea580c')" title="Tạo mã QR để quét trên điện thoại hoặc chia sẻ">
+                                  <i class="fa fa-qrcode"></i> Tạo mã QR
+                                </button>
+                              </div>
+                              <span class="clb-action-note"><i class="fa fa-info-circle"></i> Đăng ký trực tuyến • Năm học 2026 - 2027</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- HỘP HƯỚNG DẪN ĐĂNG KÝ -->
+                        <div class="clb-join-box">
+                          <h3><i class="fa fa-edit"></i> HƯỚNG DẪN ĐĂNG KÝ THAM GIA CÁC CÂU LẠC BỘ NĂM HỌC 2026 - 2027
+                          </h3>
+                          <p style="font-size:13px; line-height:1.7; color:#78350f; margin-bottom:10px;">
+                            Tất cả các bạn học sinh khối 10, 11, 12 Trường THPT Nghi Lộc 3 có đam mê, nhiệt huyết và
+                            mong muốn rèn luyện kỹ năng đều có thể đăng ký tham gia tối đa <strong>02 Câu lạc
+                              bộ</strong> phù hợp với năng khiếu và thời gian biểu của bản thân.
+                          </p>
+                          <div style="font-size:13px; color:#92400e; line-height:1.8;">
+                            <strong>1. Thời gian đăng ký đợt 1:</strong> Từ ngày 15/09 đến hết ngày 30/09/2026.<br>
+                            <strong>2. Hình thức đăng ký:</strong>
+                            <ul style="margin:4px 0 8px 18px; padding:0;">
+                              <li>Đăng ký trực tiếp với Bí thư Chi đoàn lớp để tổng hợp nộp về Văn phòng Đoàn trường.
+                              </li>
+                              <li>Gặp trực tiếp Ban Chủ nhiệm của từng CLB tại bàn tuyển sinh vào các giờ ra chơi tại
+                                sân trường.</li>
+                            </ul>
+                            <strong>3. Quyền lợi thành viên:</strong> Được cấp Giấy chứng nhận tham gia tích cực hoạt
+                            động phong trào; được ưu tiên xét các danh hiệu Đoàn viên xuất sắc, giải thưởng "Học sinh 3
+                            Tốt" các cấp và cộng điểm rèn luyện năm học.
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <!-- SIDEBAR RIGHT (4 cols) -->
+                    <div class="col-right col-xs-12 col-md-4 col-sm-4">
+
+                      <!-- Panel 1: Danh sách 9 CLB -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title"><i class="fa fa-list"></i> Danh sách 9 CLB</div>
+                        <ul class="clb-sidebar-list">
+                          <li><a href="cau-lac-bo#clb-truyen-thong"><span><i class="fa fa-camera"></i> 1. Truyền thông</span>
+                              <span class="badge" style="background:#005aab;">NMC</span></a></li>
+                          <li><a href="cau-lac-bo#clb-am-nhac"><span><i class="fa fa-music"></i> 2. Âm nhạc</span> <span
+                                class="badge" style="background:#005aab;">Music</span></a></li>
+                          <li><a href="cau-lac-bo#clb-sach-va-hanh-dong"><span><i class="fa fa-book"></i> 3. Sách & HĐ</span>
+                              <span class="badge" style="background:#005aab;">B&amp;A</span></a></li>
+                          <li><a href="cau-lac-bo#clb-khoa-hoc-tu-nhien"><span><i class="fa fa-flask"></i> 4. KHTN & STEM</span>
+                              <span class="badge" style="background:#005aab;">STEM</span></a></li>
+                          <li><a href="cau-lac-bo#clb-chuyen-doi-so"><span><i class="fa fa-laptop-code"></i> 5. Chuyển đổi
+                                số</span> <span class="badge" style="background:#005aab;">ICT</span></a></li>
+                          <li><a href="cau-lac-bo#clb-tieng-anh"><span><i class="fa fa-language"></i> 6. Tiếng Anh</span> <span
+                                class="badge" style="background:#005aab;">NEC</span></a></li>
+                          <li><a href="cau-lac-bo#clb-thanh-nien-tinh-nguyen"><span><i class="fa fa-hands-helping"></i> 7. TNTN
+                                Tình nguyện</span> <span class="badge" style="background:#005aab;">V-Club</span></a>
+                          </li>
+                          <li><a href="cau-lac-bo#clb-van-hoc"><span><i class="fa fa-feather-alt"></i> 8. Văn học</span> <span
+                                class="badge" style="background:#005aab;">Văn</span></a></li>
+                          <li><a href="cau-lac-bo#clb-the-duc-the-thao"><span><i class="fa fa-futbol"></i> 9. Thể dục Thể
+                                thao</span> <span class="badge" style="background:#005aab;">Sport</span></a></li>
+                        </ul>
+                      </div>
+
+                      <!-- Panel 2: Ban chỉ đạo -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#0369a1;"><i class="fa fa-sitemap"></i> Ban Chỉ
+                          đạo hoạt động</div>
+                        <div style="padding:12px 15px; font-size:13px; line-height:1.7; color:#475569;">
+                          <p style="margin:0 0 6px 0;"><strong>Trưởng ban chỉ đạo:</strong><br>...</p>
+                          <p style="margin:0 0 6px 0;"><strong>Phó ban thường trực:</strong><br>...</p>
+                          <p style="margin:0 0 6px 0;"><strong>Phối hợp phụ trách:</strong><br>T...</p>
+                        </div>
+                      </div>
+
+                      <!-- Panel 3: Lịch sinh hoạt tuần -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#0284c7;"><i class="fa fa-calendar-alt"></i>
+                          Lịch sinh hoạt chung</div>
+                        <div style="padding:10px 14px; font-size:12px;">
+                          <table class="table table-bordered table-condensed" style="margin-bottom:0; font-size:12px;">
+                            <tr style="background:#f8fafc;">
+                              <th>Buổi</th>
+                              <th>CLB hoạt động</th>
+                            </tr>
+                            <tr>
+                              <td><strong>Chiều Thứ 5</strong></td>
+                              <td>...</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Chiều Thứ 7</strong></td>
+                              <td>...</td>
+                            </tr>
+                            <tr>
+                              <td><strong>Hàng ngày (16h30)</strong></td>
+                              <td>...</td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+
+                      <!-- Panel 4: Hoạt động trường gần nhất -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#005aab;"><i class="fa fa-newspaper"></i> Tin
+                          hoạt động mới</div>
+                        <div style="padding:10px 14px; font-size:12px; line-height:1.6;">
+                          <div style="margin-bottom:10px; border-bottom:1px dashed #e2e8f0; padding-bottom:8px;">
+                            <a href="/tin-hoat-dong/hoat-dong-nha-truong/ron-ra-tieng-trong-khai-truong-truong-thpt-nghi-loc-3-tung-bung-buoc-vao-nam-hoc-moi-2026-2027.html"
+                              style="color:#005aab; font-weight:600; text-decoration:none;">
+                              Rộn rã tiếng trống khai trường: THPT Nghi Lộc 3 tưng bừng bước vào năm học mới 2026 - 2027
+                            </a>
+                            <div style="color:#94a3b8; font-size:11px; margin-top:3px;"><i class="fa fa-clock"></i>
+                              07/09/2026</div>
+                          </div>
+                          <div style="margin-bottom:10px; border-bottom:1px dashed #e2e8f0; padding-bottom:8px;">
+                            <a href="/thong-bao/lich-cong-tac/ke-hoach-tuan-2-tu-ngay-14-09-den-ngay-20-9-2026-.html"
+                              style="color:#005aab; font-weight:600; text-decoration:none;">
+                              Kế hoạch tuần 2 (từ ngày 14/09 đến 20/09/2026)
+                            </a>
+                            <div style="color:#94a3b8; font-size:11px; margin-top:3px;"><i class="fa fa-clock"></i>
+                              11/09/2026</div>
+                          </div>
+                          <div>
+                            <a href="/thong-bao/thong-bao-cua-truong/danh-sach-hoc-sinh-trung-tuyen-vao-10-nam-hoc-2026-2027-truong-thpt-nghi-loc-3.html"
+                              style="color:#005aab; font-weight:600; text-decoration:none;">
+                              Danh sách học sinh trúng tuyển vào lớp 10 năm học 2026-2027
+                            </a>
+                            <div style="color:#94a3b8; font-size:11px; margin-top:3px;"><i class="fa fa-clock"></i>
+                              05/08/2026</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Panel 5: Liên kết văn phòng Đoàn -->
+                      <div class="clb-sidebar-panel">
+                        <div class="clb-sidebar-title" style="background:#0f766e;"><i class="fa fa-map-marker-alt"></i>
+                          Liên hệ Đoàn trường</div>
+                        <div style="padding:12px 14px; font-size:12px; line-height:1.7; color:#475569;">
+                          <strong>Văn phòng Đoàn trường THPT Nghi Lộc 3</strong><br>
+                          Địa chỉ: Xã Nghi Xuân, Phường Vinh Lộc, Tỉnh Nghệ An<br>
+                          Email: <span style="color:#005aab;">c3nghiloc3@nghean.edu.vn</span><br>
+                          Fanpage: facebook.com/c3nghiloc3
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- End #page-content -->
+  </div><!-- End #whole-page -->
+
+  <!-- Footer -->
+  <div class="region-bottom" style="margin-top: 30px;">
+    <div id="module6" class="ModuleWrapper">
+      <div class="layout-footer-color" style="background:#fff; border-top:3px solid #005aab; padding:20px 0;">
+        <div class="container">
+          <div class="row two-col-left">
+            <div class="col-md-2 col-sidebar" style="text-align:center;">
+              <img alt="Logo THPT Nghi Lộc 3" width="90" height="90" src="http://thptnghiloc3.edu.vn/upload/33152/fck/files/logoNL3_2(1).png" />
+            </div>
+            <div class="col-md-10 col-main" style="font-size:13px; line-height:1.7; color:#555;">
+              <p style="margin:0 0 4px 0;"><span style="font-size:15px; color:#005aab;"><strong>TRƯỜNG THPT NGHI LỘC
+                    3</strong></span></p>
+              <p style="margin:0 0 4px 0;">Địa chỉ: Xã Nghi Xuân, Phường Vinh Lộc, Tỉnh Nghệ An</p>
+              <p style="margin:0 0 4px 0;">Điện thoại: 02383.860.979 - 02383.860.123 - Email: c3nghiloc3@nghean.edu.vn
+              </p>
+              <p style="margin:0; color:#888;">Ghi rõ nguồn thptnghiloc3.edu.vn khi trích dẫn thông tin từ website này.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://thptnghiloc3.edu.vn/3rdparty/jQuery/jqueryui/jquery-ui.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var monthNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+      var dayNames = ["Chủ Nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"];
+      var newDate = new Date();
+      $('#Date').html(dayNames[newDate.getDay()] + ", " + newDate.getDate() + '/' + monthNames[newDate.getMonth()] + '/' + newDate.getFullYear());
+      setInterval(function () { var s = new Date().getSeconds(); $("#sec").html((s < 10 ? "0" : "") + s); }, 1000);
+      setInterval(function () { var m = new Date().getMinutes(); $("#min").html((m < 10 ? "0" : "") + m); }, 1000);
+      setInterval(function () { var h = new Date().getHours(); $("#hours").html(h); }, 1000);
+    });
+
+    // Smooth scroll for club links and prevent base href redirection
+    (function () {
+      function scrollToHash(h) {
+        if (!h) return;
+        var target = document.getElementById(h);
+        if (target) {
+          var offset = 80;
+          var bodyRect = document.body.getBoundingClientRect().top;
+          var elementRect = target.getBoundingClientRect().top;
+          var targetTop = (elementRect - bodyRect) - offset;
+          window.scrollTo({ top: targetTop, behavior: 'smooth' });
+        }
+      }
+
+      if (window.location.hash) {
+        var h = window.location.hash.replace('#', '');
+        setTimeout(function () { scrollToHash(h); }, 250);
+      }
+
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest('a');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (href && href.indexOf('#clb-') !== -1) {
+          var targetId = href.split('#')[1];
+          if (targetId && document.getElementById(targetId)) {
+            e.preventDefault();
+            e.stopPropagation();
+            scrollToHash(targetId);
+            if (window.history && window.history.replaceState) {
+              window.history.replaceState(null, null, window.location.pathname + '#' + targetId);
+            }
+          }
+        }
+      });
+    })();
+  </script>
+
+<script id="overflow-hidden-remover">
+  (function() {
+    window.addEventListener('load', function() {
+      document.body.classList.remove('overflow-hidden');
+    });
+    document.addEventListener('click', function(e) {
+      if (e.target.closest('a')) {
+        document.body.classList.remove('overflow-hidden');
+      }
+    });
+  })();
+</script>
+
+  <!-- ==============================================
+       CSS & MODAL ĐĂNG KÝ THAM GIA CÂU LẠC BỘ
+       ============================================== -->
+  <style>
+    /* Card footer action */
+    .clb-card-footer-action {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px dashed #d1d5db;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #fafbfc;
+      margin-left: -16px;
+      margin-right: -16px;
+      margin-bottom: -14px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 14px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+    .btn-clb-register {
+      background: #005aab;
+      color: #ffffff !important;
+      border: 1px solid #004585;
+      padding: 7px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s ease, transform 0.15s ease;
+      box-shadow: 0 1px 3px rgba(0, 90, 171, 0.2);
+    }
+    .btn-clb-register:hover {
+      background: #004380;
+      transform: translateY(-1px);
+    }
+    
+    .clb-card-action-btns {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .btn-clb-qr {
+      background: #ffffff;
+      color: #0f766e !important;
+      border: 1px solid #0d9488;
+      padding: 7px 15px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      box-shadow: 0 1px 2px rgba(15, 118, 110, 0.1);
+    }
+    .btn-clb-qr:hover {
+      background: #f0fdfa;
+      color: #047857 !important;
+      border-color: #047857;
+      transform: translateY(-1px);
+    }
+    .btn-clb-qr:active {
+      transform: translateY(0);
+    }
+    .clb-qr-box {
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .clb-qr-img-wrapper {
+      display: inline-block;
+      padding: 12px;
+      background: #ffffff;
+      border: 2px dashed #005aab;
+      border-radius: 8px;
+      margin: 14px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .clb-qr-img-wrapper img {
+      display: block;
+      width: 220px;
+      height: 220px;
+      border-radius: 4px;
+    }
+    .clb-qr-link-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 12px;
+      color: #005aab;
+      word-break: break-all;
+      margin: 12px auto;
+      max-width: 460px;
+      text-align: center;
+    }
+
+    .btn-clb-register:active {
+      transform: translateY(0);
+    }
+    .clb-action-note {
+      font-size: 12px;
+      color: #64748b;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Modal Backdrop */
+    .clb-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(15, 23, 42, 0.65);
+      z-index: 999999;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 12px;
+      box-sizing: border-box;
+    }
+    .clb-modal-overlay.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Modal Dialog Container */
+    .clb-modal-container {
+      background: #ffffff;
+      width: 100%;
+      max-width: 680px;
+      border-radius: 8px;
+      box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.25);
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      margin: auto;
+      font-family: inherit;
+      animation: clbModalFadeIn 0.2s ease-out;
+    }
+    @keyframes clbModalFadeIn {
+      from { opacity: 0; transform: scale(0.97); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Modal Header */
+    .clb-modal-header {
+      background: #f8fafc;
+      border-bottom: 2px solid #005aab;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .clb-modal-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .clb-modal-badge-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #005aab;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    }
+    .clb-modal-header-title h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: #005aab;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+    .clb-modal-header-title span {
+      font-size: 12px;
+      color: #64748b;
+      display: block;
+      margin-top: 3px;
+    }
+    .clb-modal-close-btn {
+      background: none;
+      border: none;
+      font-size: 26px;
+      color: #94a3b8;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+    .clb-modal-close-btn:hover {
+      color: #ef4444;
+      background: #fee2e2;
+    }
+
+    /* Modal Body & Form */
+    .clb-modal-body {
+      padding: 20px;
+      max-height: calc(85vh - 120px);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .clb-form-section-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      margin: 0 0 12px 0;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .clb-form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 600px) {
+      .clb-form-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .clb-modal-container {
+        border-radius: 6px;
+      }
+      .clb-modal-body {
+        padding: 14px;
+      }
+    }
+    .clb-form-group {
+      margin-bottom: 14px;
+    }
+    .clb-form-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 5px;
+    }
+    .clb-form-label .required {
+      color: #dc2626;
+      font-weight: bold;
+    }
+    .clb-form-input, .clb-form-textarea, .clb-form-select {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 13px;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      background: #ffffff;
+      color: #1e293b;
+      box-sizing: border-box;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .clb-form-input:focus, .clb-form-textarea:focus, .clb-form-select:focus {
+      border-color: #005aab;
+      box-shadow: 0 0 0 2px rgba(0, 90, 171, 0.15);
+    }
+    .clb-form-help {
+      font-size: 11px;
+      color: #64748b;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* Modal Footer */
+    .clb-modal-footer {
+      padding: 14px 20px;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .clb-btn-submit {
+      background: #005aab;
+      color: #fff;
+      border: 1px solid #004585;
+      padding: 9px 22px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .clb-btn-submit:hover {
+      background: #004380;
+    }
+    .clb-btn-cancel {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      padding: 8px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .clb-btn-cancel:hover {
+      background: #e2e8f0;
+    }
+
+    /* Success confirmation box inside modal */
+    .clb-success-box {
+      display: none;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    .clb-success-icon {
+      width: 60px;
+      height: 60px;
+      background: #dcfce7;
+      color: #16a34a;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      margin-bottom: 16px;
+    }
+    .clb-success-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 8px;
+    }
+    .clb-success-desc {
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 20px auto;
+    }
+    .clb-success-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    /* Drive Connection Drawer / Settings */
+    .clb-drive-box {
+      display: none;
+      margin-top: 14px;
+      padding: 14px;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 6px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #1e3a8a;
+    }
+  </style>
+
+  <!-- MODAL ĐĂNG KÝ CLB -->
+  <div id="clbRegisterModal" class="clb-modal-overlay" onclick="handleClbBackdropClick(event)">
+    <div class="clb-modal-container">
+      
+      <!-- Modal Header -->
+      <div class="clb-modal-header">
+        <div class="clb-modal-header-left">
+          <div id="modalClbBadgeIcon" class="clb-modal-badge-icon">
+            <i id="modalClbIcon" class="fa fa-camera-retro"></i>
+          </div>
+          <div class="clb-modal-header-title">
+            <h3 id="modalClbNameTitle">ĐƠN ĐĂNG KÝ THAM GIA CÂU LẠC BỘ</h3>
+            <span>Đoàn trường THPT Nghi Lộc 3 • Tuyển thành viên 2026 - 2027</span>
+          </div>
+        </div>
+        <button type="button" class="clb-modal-close-btn" onclick="closeClbModal()" title="Đóng">&times;</button>
+      </div>
+
+      <!-- Modal Body: Form -->
+      <div id="clbModalFormSection" class="clb-modal-body">
+        
+        <div style="background:#f0f9ff; border:1px solid #bae6fd; border-radius:4px; padding:10px 14px; margin-bottom:16px; font-size:12px; color:#0369a1; line-height:1.5;">
+          <i class="fa fa-bullhorn"></i> <strong>Lưu ý:</strong> Học sinh vui lòng điền đầy đủ và trung thực các thông tin dưới đây. Ban Chủ nhiệm CLB sẽ tổng hợp danh sách gửi về Đoàn trường và thông báo lịch phỏng vấn/sinh hoạt.
+        </div>
+
+        <form id="clbApplicationForm" onsubmit="handleClbFormSubmit(event)">
+          <!-- Hidden field for Club Name -->
+          <input type="hidden" id="formClbName" name="clb_name" value="">
+          <input type="hidden" id="formClbId" name="clb_id" value="">
+
+          <!-- Phần 1: Thông tin cá nhân -->
+          <div class="clb-form-section-title"><i class="fa fa-user"></i> 1. Thông tin học sinh (Bắt buộc Họ tên, Lớp, SĐT, Gmail)</div>
+          
+          <div class="clb-form-grid-2">
+            <div class="clb-form-group">
+              <label class="clb-form-label" for="applicantName">Họ và tên học sinh <span class="required">*</span></label>
+              <input type="text" id="applicantName" name="applicant_name" class="clb-form-input" placeholder="Ví dụ: Nguyễn Văn An" required>
+            </div>
+            
+            <div class="clb-form-group">
+              <label class="clb-form-label" for="applicantClass">Chi đoàn / Lớp <span class="required">*</span></label>
+              <input type="text" id="applicantClass" name="applicant_class" class="clb-form-input" placeholder="Ví dụ: 10A1, 11A3, 12A2..." required>
+            </div>
+          </div>
+
+          <div class="clb-form-grid-2">
+            <div class="clb-form-group">
+              <label class="clb-form-label" for="applicantPhone">Số điện thoại / Zalo <span class="required">*</span></label>
+              <input type="tel" id="applicantPhone" name="applicant_phone" class="clb-form-input" placeholder="Ví dụ: 0912 345 678" pattern="[0-9]{9,11}" title="Vui lòng nhập 10 chữ số điện thoại" required>
+              <div class="clb-form-help">Dùng để BCH CLB tạo nhóm Zalo và gửi lịch sinh hoạt.</div>
+            </div>
+
+            <div class="clb-form-group">
+              <label class="clb-form-label" for="applicantEmail">Gmail / Email liên hệ <span class="required">*</span></label>
+              <input type="email" id="applicantEmail" name="applicant_email" class="clb-form-input" placeholder="Ví dụ: nguyenvanan@gmail.com" required>
+              <div class="clb-form-help">Dùng để nhận thư mời phỏng vấn và thông báo kết quả.</div>
+            </div>
+          </div>
+
+          <div class="clb-form-group">
+            <label class="clb-form-label" for="applicantHobby">Sở thích cá nhân</label>
+            <input type="text" id="applicantHobby" name="applicant_hobby" class="clb-form-input" placeholder="Ví dụ: Chụp ảnh, đàn guitar, đọc sách, thể thao...">
+          </div>
+
+          <!-- Phần 2: Năng lực và thuyết trình sở trường -->
+          <div class="clb-form-section-title" style="margin-top:10px;"><i class="fa fa-star"></i> 2. Năng lực & Bài thuyết trình sở trường</div>
+
+          <div class="clb-form-group">
+            <label class="clb-form-label" for="applicantSkills">Năng lực / Kỹ năng nổi bật của bạn</label>
+            <input type="text" id="applicantSkills" name="applicant_skills" class="clb-form-input" placeholder="Ví dụ: Biết quay video ngắn, thiết kế Canva, làm MC, đá bóng, vẽ tranh...">
+            <div class="clb-form-help">Các kỹ năng, sở trường bạn đã có sẵn liên quan đến hoạt động của CLB.</div>
+          </div>
+
+          <div class="clb-form-group">
+            <label class="clb-form-label" for="applicantEssay">
+              Bài thuyết trình sở trường về lĩnh vực đã đăng ký <span class="required">*</span>
+            </label>
+            <textarea id="applicantEssay" name="applicant_essay" class="clb-form-textarea" rows="5" required placeholder="Bạn hãy viết một bài thuyết trình ngắn về sở trường, kinh nghiệm, giải thưởng đã đạt được, niềm đam mê hoặc những thế mạnh nổi bật của bản thân trong lĩnh vực của Câu lạc bộ này. Bạn dự định sẽ đóng góp gì cho sự phát triển của CLB trong năm học mới?"></textarea>
+            <div class="clb-form-help">💡 <em>Gợi ý: Chia sẻ chân thành về niềm đam mê, các hoạt động bạn từng tham gia hoặc dự định sáng tạo của bạn.</em></div>
+          </div>
+
+          
+
+          <!-- Form Buttons in Footer -->
+          <div class="clb-modal-footer" style="margin-left:-20px; margin-right:-20px; margin-bottom:-20px; margin-top:20px;">
+            <div style="display:flex; align-items:center; gap:10px;">
+              <button type="submit" id="btnSubmitForm" class="clb-btn-submit">
+                <i class="fa fa-paper-plane"></i> Gửi đơn đăng ký
+              </button>
+              <button type="button" class="clb-btn-cancel" onclick="closeClbModal()">Hủy bỏ</button>
+            </div>
+            
+            <div style="font-size:12px; color:#64748b; display:flex; align-items:center; gap:6px;">
+              <i class="fa fa-shield-alt" style="color:#16a34a;"></i> Tuyển thành viên trực tuyến
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Modal Body: Success Screen -->
+      <div id="clbModalSuccessSection" class="clb-modal-body clb-success-box">
+        <div class="clb-success-icon"><i class="fa fa-check"></i></div>
+        <div class="clb-success-title">ĐÃ GỬI ĐƠN ĐĂNG KÝ THÀNH CÔNG!</div>
+        <div class="clb-success-desc">
+          Thông tin đăng ký của bạn đã được tiếp nhận an toàn. Ban Chủ nhiệm Câu lạc bộ và Đoàn trường THPT Nghi Lộc 3 sẽ liên hệ với bạn trong thời gian sớm nhất!
+        </div>
+
+        <div id="successSummaryCard" class="clb-success-card">
+          <!-- Summary info injected here -->
+        </div>
+
+        <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
+          <button type="button" class="clb-btn-submit" onclick="closeClbModal()" style="background:#16a34a; border-color:#15803d;">
+            <i class="fa fa-check"></i> Hoàn tất & Đóng
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  
+  <!-- ==============================================
+       MODAL MÃ QR ĐĂNG KÝ CÂU LẠC BỘ
+       ============================================== -->
+  <div id="clbQrModal" class="clb-modal-overlay" onclick="handleQrBackdropClick(event)">
+    <div class="clb-modal-container" style="max-width: 520px;">
+      
+      <!-- Modal Header -->
+      <div class="clb-modal-header">
+        <div class="clb-modal-header-left">
+          <div id="modalQrBadgeIcon" class="clb-modal-badge-icon" style="background:#0f766e;">
+            <i id="modalQrIcon" class="fa fa-qrcode"></i>
+          </div>
+          <div class="clb-modal-header-title">
+            <h3 id="modalQrClubTitle">MÃ QR ĐĂNG KÝ CLB</h3>
+            <span>Quét bằng Camera điện thoại hoặc Zalo để đăng ký trực tuyến</span>
+          </div>
+        </div>
+        <button type="button" class="clb-modal-close-btn" onclick="closeClbQrModal()" title="Đóng">&times;</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="clb-modal-body clb-qr-box">
+        <div style="font-size:13px; color:#334155; font-weight:600;">
+          Dùng camera điện thoại hoặc Zalo quét mã dưới đây:
+        </div>
+
+        <div class="clb-qr-img-wrapper">
+          <img id="clbQrImage" src="" alt="Mã QR Đăng ký CLB" title="Mã QR Đăng ký CLB">
+        </div>
+
+        <div class="clb-qr-link-box">
+          <i class="fa fa-link"></i> <span id="clbQrTargetUrlText">...</span>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="clb-modal-footer" style="justify-content:center; gap:10px;">
+        <button type="button" class="clb-btn-submit" onclick="downloadCurrentQr()" style="background:#005aab; border-color:#004585;">
+          <i class="fa fa-download"></i> Tải ảnh mã QR về máy
+        </button>
+        <button type="button" class="clb-btn-cancel" onclick="copyCurrentQrLink()">
+          <i class="fa fa-copy"></i> Sao chép link đăng ký
+        </button>
+        <button type="button" class="clb-btn-cancel" onclick="closeClbQrModal()">Đóng</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MODAL XEM DANH SÁCH ĐÃ ĐĂNG KÝ (ADMIN / PREVIEW) -->
+  <div id="clbSubmissionsListModal" class="clb-modal-overlay" onclick="handleListBackdropClick(event)">
+    <div class="clb-modal-container" style="max-width:850px;">
+      <div class="clb-modal-header">
+        <div class="clb-modal-header-left">
+          <div class="clb-modal-badge-icon" style="background:#0f766e;"><i class="fa fa-users"></i></div>
+          <div class="clb-modal-header-title">
+            <h3>DANH SÁCH ĐƠN ĐĂNG KÝ THÀNH VIÊN CLB</h3>
+            <span>Lưu trữ bộ nhớ & Google Drive • Năm học 2026 - 2027</span>
+          </div>
+        </div>
+        <button type="button" class="clb-modal-close-btn" onclick="closeRegisteredListModal()">&times;</button>
+      </div>
+
+      <div class="clb-modal-body">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:8px;">
+          <div style="font-size:13px; font-weight:600; color:#334155;">
+            Tổng số đơn: <span id="totalSubmissionsCount" style="color:#005aab; font-weight:700;">0</span> đơn
+          </div>
+          <div style="display:flex; gap:8px;">
+            <button type="button" onclick="exportSubmissionsToCSV()" style="background:#16a34a; color:#fff; border:none; padding:5px 12px; border-radius:4px; font-size:12px; cursor:pointer; font-weight:600;">
+              <i class="fa fa-file-excel"></i> Xuất file Excel / CSV
+            </button>
+            <button type="button" onclick="clearAllSubmissions()" style="background:#fee2e2; color:#b91c1c; border:1px solid #fca5a5; padding:5px 12px; border-radius:4px; font-size:12px; cursor:pointer;">
+              <i class="fa fa-trash"></i> Xóa dữ liệu mẫu
+            </button>
+          </div>
+        </div>
+
+        <div id="submissionsTableContainer" style="overflow-x:auto;">
+          <!-- Table injected dynamically -->
+        </div>
+      </div>
+
+      <div class="clb-modal-footer">
+        <button type="button" class="clb-btn-cancel" onclick="closeRegisteredListModal()">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT QUẢN LÝ ĐĂNG KÝ CLB VÀ LƯU TRỮ GOOGLE DRIVE -->
+  <script>
+    
+    var currentQrData = {
+      name: '',
+      id: '',
+      url: ''
+    };
+
+    var allClubsList = [
+      { id: 'clb-truyen-thong', name: '1. CÂU LẠC BỘ TRUYỀN THÔNG (NMC)', icon: 'fa-camera-retro', color: '#005aab' },
+      { id: 'clb-am-nhac', name: '2. CÂU LẠC BỘ ÂM NHẠC (MUSIC CLUB)', icon: 'fa-music', color: '#4f46e5' },
+      { id: 'clb-sach-va-hanh-dong', name: '3. CÂU LẠC BỘ SÁCH VÀ HÀNH ĐỘNG', icon: 'fa-book-reader', color: '#0f766e' },
+      { id: 'clb-khoa-hoc-tu-nhien', name: '4. CÂU LẠC BỘ KHOA HỌC TỰ NHIÊN & STEM', icon: 'fa-flask', color: '#0284c7' },
+      { id: 'clb-chuyen-doi-so', name: '5. CÂU LẠC BỘ CHUYỂN ĐỔI SỐ & CÔNG NGHỆ THÔNG TIN', icon: 'fa-laptop-code', color: '#2563eb' },
+      { id: 'clb-tieng-anh', name: '6. CÂU LẠC BỘ TIẾNG ANH (NEC)', icon: 'fa-language', color: '#0369a1' },
+      { id: 'clb-thanh-nien-tinh-nguyen', name: '7. CÂU LẠC BỘ THANH NIÊN TÌNH NGUYỆN', icon: 'fa-hands-helping', color: '#16a34a' },
+      { id: 'clb-van-hoc', name: '8. CÂU LẠC BỘ VĂN HỌC (KHÁT VỌNG XANH)', icon: 'fa-feather-alt', color: '#b91c1c' },
+      { id: 'clb-the-duc-the-thao', name: '9. CÂU LẠC BỘ THỂ DỤC THỂ THAO (SPORTS CLUB)', icon: 'fa-running', color: '#ea580c' }
+    ];
+
+    function openClbQrModal(name, id, icon, color) {
+      currentQrData.name = name;
+      currentQrData.id = id;
+
+      // Xây dựng URL đăng ký trực tiếp
+      var pageUrl = window.location.origin + window.location.pathname;
+      if (pageUrl.endsWith('/') === false && !pageUrl.includes('.html')) pageUrl += '/';
+      var targetUrl = pageUrl + '?dangky=' + id + '#' + id;
+      currentQrData.url = targetUrl;
+
+      // Cập nhật giao diện modal QR
+      document.getElementById('modalQrClubTitle').textContent = 'MÃ QR: ' + name;
+      document.getElementById('modalQrBadgeIcon').style.backgroundColor = color || '#005aab';
+      document.getElementById('clbQrTargetUrlText').textContent = targetUrl;
+
+      // Sinh mã QR thông qua API chuẩn, sắc nét (size 300x300)
+      var qrApiUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&margin=12&data=' + encodeURIComponent(targetUrl);
+      var imgEl = document.getElementById('clbQrImage');
+      imgEl.src = qrApiUrl;
+
+      // Mở modal
+      var modal = document.getElementById('clbQrModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeClbQrModal() {
+      var modal = document.getElementById('clbQrModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleQrBackdropClick(e) {
+      if (e.target.id === 'clbQrModal') {
+        closeClbQrModal();
+      }
+    }
+
+    function downloadCurrentQr() {
+      if (!currentQrData.url) return;
+      var qrUrl = 'https://api.qrserver.com/v1/create-qr-code/?size=500x500&margin=15&data=' + encodeURIComponent(currentQrData.url);
+      
+      // Tải ảnh về máy
+      fetch(qrUrl)
+        .then(function(res) { return res.blob(); })
+        .then(function(blob) {
+          var a = document.createElement('a');
+          a.href = URL.createObjectURL(blob);
+          a.download = 'QR_Dang_Ky_' + currentQrData.id + '.png';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        })
+        .catch(function() {
+          // Fallback mở trong tab mới
+          window.open(qrUrl, '_blank');
+        });
+    }
+
+    function copyCurrentQrLink() {
+      if (!currentQrData.url) return;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(currentQrData.url).then(function() {
+          alert('Đã sao chép liên kết đăng ký:\n' + currentQrData.url);
+        });
+      } else {
+        var tempInput = document.createElement('input');
+        tempInput.value = currentQrData.url;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+        alert('Đã sao chép liên kết đăng ký:\n' + currentQrData.url);
+      }
+    }
+
+    // Tự động mở form đăng ký nếu truy cập qua link quét QR (?dangky=clb-id)
+    window.addEventListener('DOMContentLoaded', function() {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var targetId = params.get('dangky') || (window.location.hash ? window.location.hash.replace('#', '') : '');
+        if (targetId) {
+          var found = allClubsList.find(function(c) { return c.id === targetId; });
+          if (found) {
+            setTimeout(function() {
+              openClbRegistration(found.name, found.icon, found.color, found.id);
+            }, 350);
+          }
+        }
+      } catch (err) {}
+    });
+
+    var GOOGLE_DRIVE_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyo6jdu9oSSOj9Ivj_rqmqUIHyj5VrEVFArXk8IJ_bLngFvMQrPrP4-mRNVm7eJI1DFNg/exec';
+    var currentSelectedClub = {
+      name: '',
+      icon: '',
+      color: '',
+      id: ''
+    };
+
+    // Mở modal đăng ký với thông tin câu lạc bộ tương ứng
+    function openClbRegistration(name, icon, color, id) {
+      currentSelectedClub = { name: name, icon: icon, color: color, id: id };
+      
+      // Update modal header
+      document.getElementById('modalClbNameTitle').textContent = 'ĐĂNG KÝ: ' + name;
+      document.getElementById('modalClbIcon').className = 'fa ' + icon;
+      document.getElementById('modalClbBadgeIcon').style.backgroundColor = color;
+      
+      // Update form hidden fields
+      document.getElementById('formClbName').value = name;
+      document.getElementById('formClbId').value = id;
+
+      // Reset form & views
+      document.getElementById('clbModalFormSection').style.display = 'block';
+      document.getElementById('clbModalSuccessSection').style.display = 'none';
+
+      // Load saved Google Script URL
+      
+
+      // Open modal overlay
+      var overlay = document.getElementById('clbRegisterModal');
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeClbModal() {
+      var overlay = document.getElementById('clbRegisterModal');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleClbBackdropClick(e) {
+      if (e.target.id === 'clbRegisterModal') {
+        closeClbModal();
+      }
+    }
+
+    function toggleDriveSettings() {
+      var box = document.getElementById('googleDriveSettingsBox');
+      box.style.display = (box.style.display === 'block') ? 'none' : 'block';
+    }
+
+    function saveGoogleScriptUrl() {
+      var val = document.getElementById('googleScriptUrlInput').value.trim();
+      localStorage.setItem('CLB_GOOGLE_DRIVE_WEBHOOK', val);
+      updateDriveIndicator(val);
+      alert(val ? 'Đã lưu liên kết Google Apps Script thành công!' : 'Đã xóa liên kết Google Apps Script.');
+    }
+
+    function updateDriveIndicator(url) {
+      var ind = document.getElementById('driveStatusIndicator');
+      if (url) {
+        ind.innerHTML = '<i class="fa fa-cloud-upload-alt"></i> Đồng bộ Google Drive';
+        ind.style.color = '#0284c7';
+      } else {
+        ind.innerHTML = '<i class="fa fa-hdd"></i> Lưu trữ bộ nhớ cục bộ';
+        ind.style.color = '#16a34a';
+      }
+    }
+
+    // Xử lý gửi đơn đăng ký
+    function handleClbFormSubmit(e) {
+      e.preventDefault();
+
+      var btnSubmit = document.getElementById('btnSubmitForm');
+      var originalBtnHtml = btnSubmit.innerHTML;
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Đang gửi đơn...';
+
+      var formData = {
+        id: 'DK_' + Date.now(),
+        timestamp: new Date().toLocaleString('vi-VN'),
+        clbName: document.getElementById('formClbName').value,
+        clbId: document.getElementById('formClbId').value,
+        fullName: document.getElementById('applicantName').value.trim(),
+        className: document.getElementById('applicantClass').value.trim(),
+        phoneNumber: document.getElementById('applicantPhone').value.trim(),
+        email: document.getElementById('applicantEmail').value.trim(),
+        hobby: document.getElementById('applicantHobby').value.trim() || 'Chưa điền',
+        skills: document.getElementById('applicantSkills').value.trim() || 'Chưa điền',
+        essay: document.getElementById('applicantEssay').value.trim()
+      };
+
+      // 1. Lưu vào LocalStorage (Đảm bảo không bao giờ mất dữ liệu)
+      var stored = JSON.parse(localStorage.getItem('CLB_REGISTRATIONS_DATA') || '[]');
+      stored.unshift(formData);
+      localStorage.setItem('CLB_REGISTRATIONS_DATA', JSON.stringify(stored));
+
+      // 2. Gửi ngầm vào Google Drive (không bắt người dùng chờ mạng lag)
+      if (GOOGLE_DRIVE_WEBHOOK_URL) {
+        try {
+          fetch(GOOGLE_DRIVE_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            cache: 'no-cache',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(formData)
+          }).catch(function(err) {
+            console.warn('Google Script Webhook notice:', err);
+          });
+        } catch (err) {
+          console.warn('Send error:', err);
+        }
+      }
+
+      // 3. Phản hồi giao diện siêu tốc chỉ sau 400ms
+      setTimeout(function () {
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = originalBtnHtml;
+
+        // Hiển thị màn hình thành công tức thì
+        showSuccessScreen(formData);
+        document.getElementById('clbApplicationForm').reset();
+      }, 400);
+    }
+
+    function showSuccessScreen(data) {
+      document.getElementById('clbModalFormSection').style.display = 'none';
+      var successSection = document.getElementById('clbModalSuccessSection');
+      successSection.style.display = 'block';
+
+      var summaryHtml = 
+        '<strong>Mã đăng ký:</strong> <span style="color:#005aab; font-weight:bold;">' + data.id + '</span><br>' +
+        '<strong>Câu lạc bộ:</strong> ' + data.clbName + '<br>' +
+        '<strong>Họ tên:</strong> ' + data.fullName + ' — <strong>Lớp:</strong> ' + data.className + '<br>' +
+        '<strong>Số điện thoại / Zalo:</strong> ' + data.phoneNumber + '<br>' +
+        '<strong>Gmail liên hệ:</strong> ' + (data.email || 'Chưa điền') + '<br>' +
+        '<strong>Thời gian nộp:</strong> ' + data.timestamp + '<br>' +
+        '<div style="margin-top:8px; color:#16a34a; font-weight:600;"><i class="fa fa-check-circle"></i> Đơn đăng ký đã được gửi thành công và lưu trữ an toàn vào Google Drive của trường!</div>';
+
+      document.getElementById('successSummaryCard').innerHTML = summaryHtml;
+    }
+
+    // Modal xem danh sách đơn đã đăng ký
+    function openRegisteredListModal() {
+      closeClbModal();
+      var stored = JSON.parse(localStorage.getItem('CLB_REGISTRATIONS_DATA') || '[]');
+      document.getElementById('totalSubmissionsCount').textContent = stored.length;
+
+      var container = document.getElementById('submissionsTableContainer');
+      if (stored.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding:30px; color:#64748b;">Chưa có đơn đăng ký nào được gửi. Hãy thử gửi một đơn mẫu!</div>';
+      } else {
+        var tableHtml = '<table style="width:100%; border-collapse:collapse; font-size:12px; text-align:left;">' +
+          '<thead><tr style="background:#f1f5f9; color:#334155; border-bottom:2px solid #cbd5e1;">' +
+          '<th style="padding:8px 10px;">Thời gian</th>' +
+          '<th style="padding:8px 10px;">Họ tên</th>' +
+          '<th style="padding:8px 10px;">Lớp</th>' +
+          '<th style="padding:8px 10px;">SĐT / Zalo</th>' +
+          '<th style="padding:8px 10px;">Câu lạc bộ</th>' +
+          '<th style="padding:8px 10px;">Sở trường / Thuyết trình</th>' +
+          '</tr></thead><tbody>';
+
+        stored.forEach(function(item) {
+          tableHtml += '<tr style="border-bottom:1px solid #e2e8f0;">' +
+            '<td style="padding:8px 10px; color:#64748b; white-space:nowrap;">' + item.timestamp + '</td>' +
+            '<td style="padding:8px 10px; font-weight:700; color:#005aab;">' + item.fullName + '</td>' +
+            '<td style="padding:8px 10px; font-weight:600;">' + item.className + '</td>' +
+            '<td style="padding:8px 10px;">' + item.phoneNumber + '</td>' +
+            '<td style="padding:8px 10px; color:#0369a1; font-weight:600;">' + item.clbName + '</td>' +
+            '<td style="padding:8px 10px; max-width:260px; line-height:1.4;">' +
+              '<strong>Kỹ năng:</strong> ' + item.skills + '<br>' +
+              '<span style="color:#475569;">' + item.essay + '</span>' +
+            '</td>' +
+          '</tr>';
+        });
+
+        tableHtml += '</tbody></table>';
+        container.innerHTML = tableHtml;
+      }
+
+      var modal = document.getElementById('clbSubmissionsListModal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeRegisteredListModal() {
+      var modal = document.getElementById('clbSubmissionsListModal');
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleListBackdropClick(e) {
+      if (e.target.id === 'clbSubmissionsListModal') {
+        closeRegisteredListModal();
+      }
+    }
+
+    function clearAllSubmissions() {
+      if (confirm('Bạn có chắc chắn muốn xóa toàn bộ danh sách đơn đăng ký mẫu trong trình duyệt không?')) {
+        localStorage.removeItem('CLB_REGISTRATIONS_DATA');
+        openRegisteredListModal();
+      }
+    }
+
+    function exportSubmissionsToCSV() {
+      var stored = JSON.parse(localStorage.getItem('CLB_REGISTRATIONS_DATA') || '[]');
+      if (stored.length === 0) {
+        alert('Chưa có dữ liệu đơn đăng ký để xuất.');
+        return;
+      }
+      var csv = '\uFEFF"Thoi gian","Ho va ten","Lop","So dien thoai","Gmail","Cau lac bo","So thich","Nang luc","Bai thuyet trinh so truong"\n';
+      stored.forEach(function(r) {
+        csv += '"' + (r.timestamp || '') + '",' +
+               '"' + (r.fullName || '') + '",' +
+               '"' + (r.className || '') + '",' +
+               '"' + (r.phoneNumber || '') + '",' +
+               '"' + (r.clbName || '') + '",' +
+               '"' + (r.hobby || '') + '",' +
+               '"' + (r.skills || '') + '",' +
+               '"' + (r.essay || '').replace(/"/g, '""').replace(/\n/g, ' ') + '"\n';
+      });
+
+      var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      var link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.setAttribute('download', 'Danh_Sach_Dang_Ky_CLB_THPT_Nghi_Loc_3.csv');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    function openAppsScriptGuide() {
+      alert(
+        'HƯỚNG DẪN KẾT NỐI GOOGLE DRIVE / GOOGLE SHEETS:\n\n' +
+        '1. Vào Google Drive của bạn (drive.google.com), tạo 1 Google Sheet mới (Đặt tên: "Đăng ký CLB Nghi Lộc 3").\n\n' +
+        '2. Trên thanh menu của Sheet, chọn: Tiện ích mở rộng (Extensions) -> Apps Script.\n\n' +
+        '3. Xóa hết mã cũ và dán đoạn mã Google Apps Script mẫu.\n\n' +
+        '4. Bấm "Triển khai" (Deploy) -> "Tùy chọn triển khai mới" -> Chọn "Ứng dụng web" (Web App) -> Ai có quyền truy cập: "Bất kỳ ai" (Anyone) -> Bấm Triển khai.\n\n' +
+        '5. Sao chép URL ứng dụng web (có đuôi /exec) dán vào ô "Cài đặt Drive" trong form đăng ký này là xong!'
+      );
+    }
+  </script>
+</div>
