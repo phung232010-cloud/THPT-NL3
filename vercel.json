@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/THPT-NL3/:match*", "destination": "/:match*" },
+    { "source": "/cau-lac-bo", "destination": "/index.html" },
+    { "source": "/cau-lac-bo/:match*", "destination": "/:match*" }
+  ]
+}

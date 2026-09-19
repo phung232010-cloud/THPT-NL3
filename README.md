@@ -47,7 +47,7 @@ Sau khi đã tải toàn bộ mã nguồn lên Repository trên GitHub:
    - Tại dòng **Branch**: Chọn nhánh `main` và thư mục là `/ (root)`.
    - Bấm **Save**.
 4. Chờ khoảng 1-2 phút, truy cập đường link trang web của bạn:
-   👉 **`https://phung232010-cloud.github.io/THPT-NL3/`**
+   👉 **`https://clb-thptnghiloc3.vercel.app/`**
 
 ---
 
